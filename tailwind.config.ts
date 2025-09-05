@@ -61,6 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				quest: {
+					available: 'hsl(var(--quest-available))',
+					completed: 'hsl(var(--quest-completed))',
+					locked: 'hsl(var(--quest-locked))',
+					'in-progress': 'hsl(var(--quest-in-progress))'
+				},
+				tier: {
+					1: 'hsl(var(--tier-1))',
+					2: 'hsl(var(--tier-2))',
+					3: 'hsl(var(--tier-3))',
+					4: 'hsl(var(--tier-4))',
+					5: 'hsl(var(--tier-5))'
 				}
 			},
 			borderRadius: {
