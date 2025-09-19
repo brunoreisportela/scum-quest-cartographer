@@ -1,0 +1,148 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 2,
+  "Title": "Repairs for Propane",
+  "Description": "Gather a Hammer and a few Nails, I want you to fix my roof. I will give you a deal on some Propane.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "GasTank",
+          "Price": 1000,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find 10 Nails",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": true,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Nails"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Find a Hammer",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": true,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Sledgehammer",
+            "1H_Improvised_Hammer"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Goto the General Goods Rooftop and Repair it",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Ext_Trader.Z_3_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Main_RoofProps_MERGED_01",
+          "FallbackTransform": "25844.326172,-674763.312500,907.338684|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_01.SM_Main_RoofProps_MERGED_01",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Ext_Trader.Z_3_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Main_RoofProps_MERGED_02",
+          "FallbackTransform": "26905.291016,-673907.000000,985.193481|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_02.SM_Main_RoofProps_MERGED_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Ext_Trader.A_0_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_5.SM_Main_RoofProps_MERGED_02",
+          "FallbackTransform": "-617583.437500,-558509.125000,3098.880371|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_02.SM_Main_RoofProps_MERGED_02",
+          "Instance": 5
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Ext_Trader.A_0_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_5.SM_Main_RoofProps_MERGED_01",
+          "FallbackTransform": "-617275.500000,-557180.937500,3021.025391|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_01.SM_Main_RoofProps_MERGED_01",
+          "Instance": 5
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Ext_Trader.B_4_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Main_RoofProps_MERGED_02",
+          "FallbackTransform": "566326.187500,-223582.703125,993.063660|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_02.SM_Main_RoofProps_MERGED_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Ext_Trader.B_4_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Main_RoofProps_MERGED_01",
+          "FallbackTransform": "566988.750000,-224774.343750,915.208862|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_01.SM_Main_RoofProps_MERGED_01",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Ext_Trader.C_2_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building2.SM_Main_RoofProps_MERGED_02",
+          "FallbackTransform": "-149106.703125,293477.562500,70326.546875|0.000000,101.060310,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_02.SM_Main_RoofProps_MERGED_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Ext_Trader.C_2_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building2.SM_Main_RoofProps_MERGED_01",
+          "FallbackTransform": "-150468.687500,293414.500000,70248.695312|0.000000,101.060310,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Merged_Meshes/Main/SM_Main_RoofProps_MERGED_01.SM_Main_RoofProps_MERGED_01",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 2,
+      "MaxNeeded": 2,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5
+    },
+    {
+      "TrackingCaption": "Use Nails",
+      "SequenceIndex": 3,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Nails"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Use Hammer",
+      "SequenceIndex": 4,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "1H_Improvised_Hammer",
+            "Sledgehammer"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    }
+  ]
+}

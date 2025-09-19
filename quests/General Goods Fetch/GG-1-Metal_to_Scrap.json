@@ -1,0 +1,54 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "Metal to Scrap",
+  "Description": "I'll sell you cheap Scrap Metal for spare Metal Knives, nothing improvised!",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Metal_Scrap_01",
+          "Price": 50,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me small Metal Knives",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "1H_RaymondCruz_Knife",
+            "1H_KitchenKnife_04",
+            "1H_KitchenKnife_DigitalDeluxe",
+            "1H_KitchenKnife_03",
+            "1H_KitchenKnife_02_Deluxe",
+            "1H_KitchenKnife",
+            "1H_KitchenKnife_02",
+            "1H_EMpossible_Knife",
+            "1H_Bushman",
+            "1H_Kunai",
+            "1H_MK5000_Black",
+            "1H_MK5000_Metal",
+            "1H_N9_Black",
+            "1H_N9_White",
+            "1H_Scalpel",
+            "1H_Scout_Black",
+            "1H_Scout_White"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    }
+  ]
+}

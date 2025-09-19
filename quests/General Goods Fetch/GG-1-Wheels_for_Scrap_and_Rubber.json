@@ -1,0 +1,71 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "Wheels for Scrap and Rubber",
+  "Description": "I'll sell you cheap Scrap Metal, Rubber, Lead Plates, and Rubber for a spare Wheels, nothing improvised!",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Rubber_sheet",
+          "Price": 25,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Metal_Scrap_01",
+          "Price": 50,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Lead_Plate",
+          "Price": 50,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Bolts",
+          "Price": 50,
+          "Amount": 5,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 1 Wheel",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Wheel_6x16_Item",
+            "Wheel_265_60_R18_Item",
+            "Wheel_255_55_R16_Item",
+            "Wheel_205_80_R12_Item",
+            "Dirtbike_Wheel_90_90_R21_Item",
+            "Wheel_155_R65_Item",
+            "SportBike_Wheel_90_90_R18_Item",
+            "Dirtbike_Wheel_110_80_R19_Item",
+            "SportBike_Wheel_100_90_R18_Item",
+            "Cruiser_Wheel_188_53_R17",
+            "Cruiser_Wheel_155_66_R17",
+            "Bicycle_Wheel_60_622_Item",
+            "Bicycle_Wheel_54_622_Item"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    }
+  ]
+}

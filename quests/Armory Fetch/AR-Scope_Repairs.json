@@ -1,0 +1,39 @@
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 2,
+  "Title": "Scope Repairs",
+  "Description": "We need some repair parts for these Scopes. Bring me some glass materials that would be good enough to make Scopes with, and I'll give you some cash.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2500,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 4 Lenses or Magnifying Glasses",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Camera_Lens",
+            "Magnifying_Glass",
+            "Magnifying_Glass1"
+          ],
+          "RequiredNum": 4
+        }
+      ]
+    }
+  ]
+}

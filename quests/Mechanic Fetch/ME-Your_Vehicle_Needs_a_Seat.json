@@ -1,0 +1,58 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 1,
+  "Title": "We need Seat Parts",
+  "Description": "Bring me materials to repair these old Vehicle Seats, I'm running low.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 25 Scrap Metal",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Metal_Scrap_01",
+            "Metal_Scrap_02",
+            "Metal_Scrap_03",
+            "Metal_Scrap_04",
+            "Metal_Scrap_05"
+          ],
+          "RequiredNum": 25
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Bring me 25 Good Rags",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rags"
+          ],
+          "RequiredNum": 25,
+          "MinAcceptedItemHealth": 86.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "Let the Good Times Roll",
+  "Description": "The Pharmacy in Spickovina, B2, isn't getting power, go there and find out why. I'll give you my old Harmonica for your troubles.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1000,
+      "Skills": [
+        {
+          "Skill": "Engineering",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "Harmonica",
+          "Price": 0,
+          "Amount": 1,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check for power issues in Spickovina, B2",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_2_Spickovina_01.B_2_Spickovina_01:PersistentLevel.BP_Transformator_Continental_A_CHILD_02_3.Mesh",
+          "FallbackTransform": "-54418.757812,-84534.414062,36435.941406|0.000000,64.559708,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Stone_House/Transformer/SM_Transformer_only.SM_Transformer_only",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 20,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -54418.184,
+            "Y": -84535.391,
+            "Z": 36169.008
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "AssociatedNpc": "Banker",
+  "Tier": 1,
+  "Title": "Looking for a Starter Card",
+  "Description": "DId you happen to find a Starter Bank Card around here? I'll reward you for one.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 1 Starter Bank Card",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Credit_Card_Starter"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    }
+  ]
+}

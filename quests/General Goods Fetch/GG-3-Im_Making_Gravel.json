@@ -1,0 +1,55 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 3,
+  "Title": "I'm Making Gravel",
+  "Description": "I have a new tool that crushes Rocks into Gravel, bring me 50 Small Rocks and 10 Empty Bags and I will make you some Gravel Bags.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "GravelBag",
+          "Price": 100,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 10 Empty Bags",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "EmptyBag"
+          ],
+          "RequiredNum": 10,
+          "MinAcceptedItemHealth": 50.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Bring me 50 Small Rocks",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Stone_Small"
+          ],
+          "RequiredNum": 50
+        }
+      ]
+    }
+  ]
+}

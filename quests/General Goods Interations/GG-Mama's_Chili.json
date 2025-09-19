@@ -1,0 +1,49 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 2,
+  "Title": "Mama's Chili",
+  "Description": "I can't remember what Mama used to put in the chili, but there is an old cookbook my Mama used in the Hospital in B0. Get it!",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1500,
+      "Fame": 10,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Go To Hospital in B0, search for the Cookbook",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_0_Hospital_WingB.B_0_Hospital_WingB:PersistentLevel.BP_HK_Interior_WingB_2.InstancedStaticMesh6",
+          "FallbackTransform": "-633174.125000,-153874.843750,31249.453125|0.000000,-89.998901,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Abbandoned_School/Meshes/Misc/SM_Bookcase_Composition_03.SM_Bookcase_Composition_03",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 25,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -633365.375,
+            "Y": -153934.359,
+            "Z": 31203.6
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

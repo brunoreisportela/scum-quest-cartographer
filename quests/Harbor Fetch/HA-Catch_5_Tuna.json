@@ -1,0 +1,37 @@
+{
+  "AssociatedNpc": "Harbourmaster",
+  "Tier": 1,
+  "Title": "Catch 5 Tuna",
+  "Description": "Catch 5 Tuna",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1500,
+      "Fame": 20,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Catch 5 Tuna",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Fish_Tuna"
+          ],
+          "RequiredNum": 5
+        }
+      ]
+    }
+  ]
+}

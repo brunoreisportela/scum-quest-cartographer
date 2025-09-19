@@ -1,0 +1,38 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "Rag Strips for Thread",
+  "Description": "I'll sell you cheap rolls of thread for 50 Rag Strips.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Thread",
+          "Price": 10,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 50 Rag Strips",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rag_Stripes"
+          ],
+          "RequiredNum": 50
+        }
+      ]
+    }
+  ]
+}

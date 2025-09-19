@@ -1,0 +1,109 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Supplies for WolfsWagen Body Front & Bumper",
+  "Description": "There are so many vehicles without working engines because we can't supply bumpers to these scum bag drivers! These supplies will help me build more WolfsWagen Body Fronts and Bumpers. Get me 30 pieces of Scrap Metal, 10 Bolts, and 20 pieces of Rubber. You might find some supplies in the Car Garage at the Factory, B1",
+  "TimeLimitHours": 72.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "WW_Body_Front",
+          "Price": 3500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "WW_Bumper_Front_Item",
+          "Price": 400,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check the Car Garage at the Factory, B1",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_1_Factory_BASE_02.B_1_Factory_BASE_02:PersistentLevel.BP_Prison_Garage_EXT_01_CHILD_5.SM_Prison_Garage",
+          "FallbackTransform": "-402383.843750,-9717.562500,34930.347656|0.000000,-30.064981,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Buildings/SM_Prison_Garage.SM_Prison_Garage",
+          "Instance": 2
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -402469.25,
+            "Y": -9665.832,
+            "Z": 35013.719
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 30 pieces of Scrap Metal",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Metal_Scrap_05",
+            "Metal_Scrap_04",
+            "Metal_Scrap_03",
+            "Metal_Scrap_02",
+            "Metal_Scrap_01"
+          ],
+          "RequiredNum": 30
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 10 Bolts",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Bolts"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 20 pieces of Rubber",
+      "SequenceIndex": 3,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rubber_sheet"
+          ],
+          "RequiredNum": 20
+        }
+      ]
+    }
+  ]
+}

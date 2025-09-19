@@ -1,0 +1,116 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Supplies for Laika Left & Right Bodies",
+  "Description": "These idiots are getting shot while driving without a proper body! These supplies will help me build more Laika Left and Right Bodies. Get me 100 pieces of Scrap Metal, 20 Bolts, and 10 pieces of Rubber. You might find some supplies in the Car Garage at the Prison, C2",
+  "TimeLimitHours": 72.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Laika_Body_Left",
+          "Price": 3500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Laika_Body_Right",
+          "Price": 3500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Laika_Body_Top",
+          "Price": 3500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check the Car Garage at the Prison, C2",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Prison_01.C_2_Prison_01:PersistentLevel.BP_Jail_Garage_Blueprint_EXT_01_CHILD_03.SM_Prison_Garage",
+          "FallbackTransform": "-61395.437500,151266.750000,72427.523438|0.000000,70.000061,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Buildings/SM_Prison_Garage.SM_Prison_Garage",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -61436.676,
+            "Y": 151154.719,
+            "Z": 72511.391
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 100 pieces of Scrap Metal",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Metal_Scrap_05",
+            "Metal_Scrap_04",
+            "Metal_Scrap_03",
+            "Metal_Scrap_02",
+            "Metal_Scrap_01"
+          ],
+          "RequiredNum": 100
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 20 Bolts",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Bolts"
+          ],
+          "RequiredNum": 20
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 10 pieces of Rubber",
+      "SequenceIndex": 3,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rubber_sheet"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    }
+  ]
+}

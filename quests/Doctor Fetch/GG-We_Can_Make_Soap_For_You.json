@@ -1,0 +1,48 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "The First Rule Is...",
+  "Description": "We are now making soap. Bring in some fat and we will provide you with soap.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 100,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "Soap",
+          "Price": 100,
+          "Amount": 5,
+          "Fame": 0,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 5 Pieces of Fat",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Big_Animal_Fat",
+            "Small_Animal_Fat",
+            "Zombie_Fat"
+          ],
+          "RequiredNum": 5
+        }
+      ]
+    }
+  ]
+}

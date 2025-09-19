@@ -2,7 +2,7 @@ import { Quest } from '@/types/quest';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { CheckCircle, Clock, Target, Lock, MapPin, Award, List } from 'lucide-react';
+import { CheckCircle, Clock, Target, Lock, MapPin, Award, List, User, Timer, Zap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface QuestDetailsProps {
@@ -17,109 +17,126 @@ const statusIcons = {
 };
 
 const statusColors = {
-  locked: 'text-quest-locked',
-  available: 'text-quest-available',
-  'in-progress': 'text-quest-in-progress',
-  completed: 'text-quest-completed',
+  locked: 'text-slate-400',
+  available: 'text-blue-400',
+  'in-progress': 'text-yellow-400',
+  completed: 'text-emerald-400',
 };
 
 const tierColors = {
-  1: 'border-tier-1 bg-tier-1/10',
-  2: 'border-tier-2 bg-tier-2/10',
-  3: 'border-tier-3 bg-tier-3/10',
-  4: 'border-tier-4 bg-tier-4/10',
-  5: 'border-tier-5 bg-tier-5/10',
+  1: 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10',
+  2: 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10',
+  3: 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-violet-500/10',
+  4: 'border-orange-400/50 bg-gradient-to-br from-orange-500/10 to-red-500/10',
+  5: 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-pink-500/10',
 };
 
 const difficultyColors = {
-  Easy: 'bg-tier-1',
-  Medium: 'bg-tier-2',
-  Hard: 'bg-tier-4',
-  Extreme: 'bg-tier-5',
+  Easy: 'bg-green-500 text-white',
+  Medium: 'bg-blue-500 text-white',
+  Hard: 'bg-orange-500 text-white',
+  Extreme: 'bg-red-500 text-white',
+};
+
+const questTypeIcons = {
+  Fetch: '📦',
+  Interaction: '🤝',
+  Mixed: '⚡',
 };
 
 export function QuestDetails({ quest }: QuestDetailsProps) {
   const StatusIcon = statusIcons[quest.status];
   
   return (
-    <div className="space-y-4">
-      <Card className={cn('border-2', tierColors[quest.tier])}>
+    <div className="p-6 h-full">
+      <Card className={cn('border-2 bg-slate-800/50 backdrop-blur-sm', tierColors[quest.tier])}>
         <CardHeader>
-          <div className="flex items-center gap-3">
-            <StatusIcon className={cn('h-6 w-6', statusColors[quest.status])} />
+          <div className="flex items-start gap-3">
+            <StatusIcon className={cn('h-7 w-7 mt-1', statusColors[quest.status])} />
             <div className="flex-1">
-              <CardTitle className="text-xl">{quest.name}</CardTitle>
-              <CardDescription className="mt-1">
+              <CardTitle className="text-xl text-slate-200 leading-tight">{quest.name}</CardTitle>
+              <CardDescription className="mt-2 text-slate-400 leading-relaxed">
                 {quest.description}
               </CardDescription>
             </div>
+            <div className="text-3xl">{questTypeIcons[quest.questType]}</div>
           </div>
           
           <div className="flex flex-wrap gap-2 mt-4">
-            <Badge variant="outline" className="text-sm">
+            <Badge variant="outline" className="text-sm bg-slate-700/50 border-slate-600 text-slate-300">
               Tier {quest.tier}
             </Badge>
             {quest.difficulty && (
-              <Badge 
-                className={cn(
-                  'text-sm text-white',
-                  difficultyColors[quest.difficulty]
-                )}
-              >
+              <Badge className={cn('text-sm', difficultyColors[quest.difficulty])}>
                 {quest.difficulty}
               </Badge>
             )}
             <Badge 
               variant="outline" 
-              className={cn('text-sm', statusColors[quest.status])}
+              className={cn('text-sm border-slate-600', statusColors[quest.status], 'bg-slate-700/30')}
             >
               {quest.status.replace('-', ' ').toUpperCase()}
             </Badge>
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-4">
-          {quest.location && (
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">Location:</span>
-              <span className="text-sm text-muted-foreground">{quest.location}</span>
+        <CardContent className="space-y-5">
+          {/* Quest Info */}
+          <div className="grid grid-cols-1 gap-3">
+            <div className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg">
+              <User className="h-4 w-4 text-slate-400" />
+              <span className="text-sm font-medium text-slate-300">NPC:</span>
+              <span className="text-sm text-slate-200">{quest.npc}</span>
             </div>
-          )}
+            
+            <div className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg">
+              <Timer className="h-4 w-4 text-slate-400" />
+              <span className="text-sm font-medium text-slate-300">Time Limit:</span>
+              <span className="text-sm text-slate-200">{quest.timeLimitHours} hours</span>
+            </div>
+            
+            {quest.location && (
+              <div className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg">
+                <MapPin className="h-4 w-4 text-slate-400" />
+                <span className="text-sm font-medium text-slate-300">Location:</span>
+                <span className="text-sm text-slate-200">{quest.location}</span>
+              </div>
+            )}
+          </div>
           
           {quest.requirements && quest.requirements.length > 0 && (
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <List className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm font-medium">Requirements:</span>
+              <div className="flex items-center gap-2 mb-3">
+                <List className="h-5 w-5 text-slate-400" />
+                <span className="text-sm font-semibold text-slate-300">Requirements</span>
               </div>
-              <ul className="space-y-1 ml-6">
+              <div className="space-y-2">
                 {quest.requirements.map((requirement, index) => (
-                  <li key={index} className="text-sm text-muted-foreground flex items-center gap-2">
-                    <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-                    {requirement}
-                  </li>
+                  <div key={index} className="flex items-start gap-3 p-3 bg-slate-700/20 rounded-lg border border-slate-600/30">
+                    <div className="w-2 h-2 bg-slate-400 rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-sm text-slate-300 leading-relaxed">{requirement}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
           
-          <Separator />
+          <Separator className="bg-slate-600/50" />
           
           {quest.rewards && quest.rewards.length > 0 && (
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Award className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Rewards:</span>
+              <div className="flex items-center gap-2 mb-3">
+                <Award className="h-5 w-5 text-emerald-400" />
+                <span className="text-sm font-semibold text-emerald-300">Rewards</span>
               </div>
-              <ul className="space-y-1 ml-6">
+              <div className="space-y-2">
                 {quest.rewards.map((reward, index) => (
-                  <li key={index} className="text-sm text-primary flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                    {reward}
-                  </li>
+                  <div key={index} className="flex items-start gap-3 p-3 bg-emerald-500/10 rounded-lg border border-emerald-400/20">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-sm text-emerald-300 leading-relaxed">{reward}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
         </CardContent>

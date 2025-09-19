@@ -1,0 +1,185 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 2,
+  "Title": "Need a few Bucks",
+  "Description": "Need money? Grab a Rag and a bar of Soap, start cleaning the place.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 5000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Tactics",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find a Rag",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rags"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Find a bar of Soap",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Soap"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Clean the shop area",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Trader.B_4_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_4.StaticMesh11",
+          "FallbackTransform": "566085.875000,-224413.843750,278.190125|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_02.SM_MERGED_Shelves_02",
+          "Instance": 4
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Trader.B_4_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_4.StaticMesh12",
+          "FallbackTransform": "565762.875000,-224070.906250,277.668518|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_01.SM_MERGED_Shelves_01",
+          "Instance": 4
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Trader.B_4_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_4.StaticMesh13",
+          "FallbackTransform": "566501.937500,-224195.906250,275.620880|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_03.SM_MERGED_Shelves_03",
+          "Instance": 4
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Trader.B_4_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_4.StaticMesh5",
+          "FallbackTransform": "566608.437500,-225048.687500,310.343506|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Mesh_006_VT.SM_MERGED_Mesh_006_VT",
+          "Instance": 4
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Ext_Trader.B_4_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Outpost_Trader_Main_02",
+          "FallbackTransform": "566457.687500,-224468.640625,246.180847|0.000000,-142.518448,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Variants/SM_Outpost_Trader_Main_02.SM_Outpost_Trader_Main_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Ext_Trader.Z_3_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_2.SM_Outpost_Trader_Main_02",
+          "FallbackTransform": "26054.875000,-674187.937500,238.310730|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Variants/SM_Outpost_Trader_Main_02.SM_Outpost_Trader_Main_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Trader.Z_3_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor2_2.StaticMesh5",
+          "FallbackTransform": "25509.101562,-674435.562500,302.473389|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Mesh_006_VT.SM_MERGED_Mesh_006_VT",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Trader.Z_3_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor2_2.StaticMesh13",
+          "FallbackTransform": "26331.156250,-674184.937500,267.750763|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_03.SM_MERGED_Shelves_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Trader.Z_3_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor2_2.StaticMesh12",
+          "FallbackTransform": "26328.068359,-673435.375000,269.798401|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_01.SM_MERGED_Shelves_01",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Trader.Z_3_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor2_2.StaticMesh11",
+          "FallbackTransform": "26045.343750,-673812.187500,270.320007|0.000000,137.317154,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_02.SM_MERGED_Shelves_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Ext_Trader.A_0_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building_5.SM_Outpost_Trader_Main_02",
+          "FallbackTransform": "-617086.750000,-557763.812500,2351.997559|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Variants/SM_Outpost_Trader_Main_02.SM_Outpost_Trader_Main_02",
+          "Instance": 5
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Trader.A_0_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh5",
+          "FallbackTransform": "-616809.500000,-557232.437500,2416.160156|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Mesh_006_VT.SM_MERGED_Mesh_006_VT",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Trader.A_0_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh13",
+          "FallbackTransform": "-617302.500000,-557936.437500,2381.437500|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_03.SM_MERGED_Shelves_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Trader.A_0_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh12",
+          "FallbackTransform": "-616838.187500,-558524.812500,2383.485352|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_01.SM_MERGED_Shelves_01",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Trader.A_0_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh11",
+          "FallbackTransform": "-616847.687500,-558053.875000,2384.006836|0.000000,-4.642397,0.000005|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_02.SM_MERGED_Shelves_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Ext_Trader.C_2_Outpost_Ext_Trader:PersistentLevel.BP_Outpost_Trader_building2.SM_Outpost_Trader_Main_02",
+          "FallbackTransform": "-149958.593750,293754.000000,69579.664062|0.000000,101.060310,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/Buildings/Variants/SM_Outpost_Trader_Main_02.SM_Outpost_Trader_Main_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Trader.C_2_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh5",
+          "FallbackTransform": "-150545.140625,293877.062500,69643.828125|0.000000,101.060234,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Mesh_006_VT.SM_MERGED_Mesh_006_VT",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Trader.C_2_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh13",
+          "FallbackTransform": "-149734.015625,293593.000000,69609.101562|0.000000,101.060234,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_03.SM_MERGED_Shelves_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Trader.C_2_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh12",
+          "FallbackTransform": "-149293.250000,294199.218750,69611.148438|0.000000,101.060234,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_01.SM_MERGED_Shelves_01",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Trader.C_2_Outpost_Trader:PersistentLevel.BP_Outpost_Trader_Indoor_2.StaticMesh11",
+          "FallbackTransform": "-149744.078125,294062.593750,69611.671875|0.000000,101.060234,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Trader/MergedAssetsVT/SM_MERGED_Shelves_02.SM_MERGED_Shelves_02",
+          "Instance": 2
+        }
+      ],
+      "MinNeeded": 5,
+      "MaxNeeded": 5,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5
+    }
+  ]
+}

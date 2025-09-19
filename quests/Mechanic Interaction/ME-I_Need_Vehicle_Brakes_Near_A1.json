@@ -1,0 +1,49 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Lost Love",
+  "Description": "I had a date last night, but she never showed up. The last time we talked, she was about to leave her home in Apatija, in A1. Go see if she left, or met her fate.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2500,
+      "Fame": 20,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find the car belonging to the mechanics date in Apatrija, A1",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_1_Apatija_2.A_1_Apatija_2:PersistentLevel.SM_Car_02_4.StaticMeshComponent0",
+          "FallbackTransform": "-492208.531250,-421513.562500,561.000000|0.000000,-67.378883,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Objects/Outdoor/Cars/Car_02/SM_Car_02.SM_Car_02",
+          "Instance": 2
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": true,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -492141.0,
+            "Y": -421807.0,
+            "Z": 644.134
+          },
+          "SizeFactor": 1.2
+        }
+      ]
+    }
+  ]
+}

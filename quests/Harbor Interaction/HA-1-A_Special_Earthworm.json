@@ -1,0 +1,83 @@
+{
+  "AssociatedNpc": "Harbourmaster",
+  "Tier": 2,
+  "Title": "A Special Earthworm",
+  "Description": "Legend has it that an Earthworm born near the Waterfall in C1 will attract larger fish, bring me one please! ",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 5000,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "PremiumBoiliesPack",
+          "Price": 10,
+          "Amount": 5,
+          "Fame": 25,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check the Riverbank at the Waterfall in C1",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_C_1_2c.Landscape_C_1_2c:PersistentLevel.LandscapeStreamingProxy_C_1_2c.SplineMeshComponent_213",
+          "FallbackTransform": "-385096.593750,120041.359375,39418.960938|0.000000,0.000000,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Landscape/Rivers/RiverBanks/RiverBank_02_b_RVT.RiverBank_02_b_RVT",
+          "Instance": 213
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -384522.5,
+            "Y": 120258.102,
+            "Z": 39763.734
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Find an Earthworm near the Waterfall, C1",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Earthworm"
+          ],
+          "RequiredNum": 1
+        }
+      ],
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -384522.5,
+            "Y": 120258.102,
+            "Z": 39763.734
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

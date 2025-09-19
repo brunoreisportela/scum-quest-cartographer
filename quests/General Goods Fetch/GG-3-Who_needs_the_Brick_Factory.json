@@ -1,0 +1,56 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 3,
+  "Title": "Who needs the Brick Factory",
+  "Description": "I have a new tool that crushes Large Rocks into Bricks, bring me 100 Large Rocks and 10 Ropes and I will make you Bundles of Bricks.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Bundle_Of_Bricks",
+          "Price": 500,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 10 Ropes",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Improvised_rope",
+            "Rope1"
+          ],
+          "RequiredNum": 10,
+          "MinAcceptedItemHealth": 50.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Bring me 100 Large Rocks",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Stone"
+          ],
+          "RequiredNum": 100
+        }
+      ]
+    }
+  ]
+}

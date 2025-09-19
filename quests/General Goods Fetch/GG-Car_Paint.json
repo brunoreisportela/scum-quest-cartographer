@@ -1,0 +1,77 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 1,
+  "Title": "Car Paint",
+  "Description": "I am starting to see more vehicles lately, and everyone wants them painted. Bring me 2 Cans of Spray Paint.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 2 Cans of Spray Paint",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "ColorCan_AmberYellow",
+            "ColorCan_BaronBrown",
+            "ColorCan_Black",
+            "ColorCan_BrownRed",
+            "ColorCan_BrownYellow",
+            "ColorCan_CandyPink",
+            "ColorCan_CherryRed",
+            "ColorCan_ColdCyan",
+            "ColorCan_ColdGrey",
+            "ColorCan_CottonCandy",
+            "ColorCan_DarkBrown",
+            "ColorCan_DarkGreen",
+            "ColorCan_DarkGrey",
+            "ColorCan_DarkUrban",
+            "ColorCan_DeepOrange",
+            "ColorCan_EarthGreen",
+            "ColorCan_EarthGrey",
+            "ColorCan_EarthRed",
+            "ColorCan_EarthYellow",
+            "ColorCan_FireEngineRed",
+            "ColorCan_FlatBrown",
+            "ColorCan_FlatGrey",
+            "ColorCan_FlatWhite",
+            "ColorCan_ForestGreen",
+            "ColorCan_GalaxyBlue",
+            "ColorCan_GalaxyGrey",
+            "ColorCan_GalaxyWhite",
+            "ColorCan_GreenCyan",
+            "ColorCan_HazyPurple",
+            "ColorCan_LightBrown",
+            "ColorCan_LightUrban",
+            "ColorCan_LimeGreen",
+            "ColorCan_NavyBlue",
+            "ColorCan_NavyGrey",
+            "ColorCan_NavyWhite",
+            "ColorCan_PoliceBlue",
+            "ColorCan_RedChocolate",
+            "ColorCan_RedGrey",
+            "ColorCan_SnowWhite",
+            "ColorCan_VelvetBrown",
+            "ColorCan_WarmGrey"
+          ],
+          "RequiredNum": 2
+        }
+      ]
+    }
+  ]
+}

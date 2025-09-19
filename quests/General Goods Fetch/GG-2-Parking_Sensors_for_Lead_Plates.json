@@ -1,0 +1,38 @@
+{
+  "AssociatedNpc": "GeneralGoods",
+  "Tier": 2,
+  "Title": "Parking Sensors for Lead Plates",
+  "Description": "Lead Plates are hard to come by, bring me 10 Parking Sensors, and I can sell you some Lead Plates from the materials found.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Lead_Plate",
+          "Price": 50,
+          "Amount": 10,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 10 Parking Sensors",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Parking_Sensor"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    }
+  ]
+}

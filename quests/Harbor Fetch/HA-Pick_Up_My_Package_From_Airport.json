@@ -1,0 +1,73 @@
+{
+  "AssociatedNpc": "Harbourmaster",
+  "Tier": 2,
+  "Title": "Find my package at Airfireld in Z0",
+  "Description": "I was waiting on a package to arrive with special parts for my boat lift at the Airfield in Z0. I haven't heard if they have arrived yet, but I don't have time to check. Check it for me and I'll give you a deal on a Fishing Pole and Reel.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1000,
+      "Fame": 10,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "FishingReelPro",
+          "Price": 0,
+          "Amount": 1,
+          "Fame": 5,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "FishingRod_A",
+          "Price": 50,
+          "Amount": 1,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Go to the Airfield in Z0, check if the package has arrived.",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_0_Airfield_01.Z_0_Airfield_01:PersistentLevel.BP_Airplane_Hangar_2.StaticMesh49",
+          "FallbackTransform": "-761985.375000,-680464.250000,10624.614258|0.000000,-89.999992,0.000000|1.109709,1.109709,1.109709",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Objects/Indoor/Storage/Workshop/SM_Table_Warehouse-Workshop.SM_Table_Warehouse-Workshop",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": true,
+      "WorldMarkerShowDistance": 25,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "SizeFactor": 1.0
+        },
+        {
+          "Location": {
+            "X": -761913.875,
+            "Y": -680632.188,
+            "Z": 10716.562
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

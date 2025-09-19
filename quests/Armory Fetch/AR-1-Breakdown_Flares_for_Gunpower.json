@@ -1,0 +1,41 @@
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 1,
+  "Title": "Breakdown Flares for Gunpower",
+  "Description": "Bring me any spare Flares, and I can break it down into Gunpowder for cheap!",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Gun_Powder",
+          "Price": 50,
+          "Amount": 6,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me a Flare or Flare Cartridge",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "FlareCartridge",
+            "FlareItem",
+            "FlareItem_Blue",
+            "FlareItem_Green"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    }
+  ]
+}

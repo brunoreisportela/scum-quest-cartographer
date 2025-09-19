@@ -1,0 +1,49 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Bolt for Bolts",
+  "Description": "I ordered some custom bolts from a powerful squad, but something tells me they took my money and ran. Check the rally point at the Gas Station in Z3",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2000,
+      "Fame": 20,
+      "Skills": [
+        {
+          "Skill": "Awareness",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check the rally point at the Gas Station in Z3",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Gas_Station_Cont_01.Z_3_Gas_Station_Cont_01:PersistentLevel.SM_Car_04_0.StaticMeshComponent0",
+          "FallbackTransform": "103022.375000,-756703.687500,1008.080078|0.000000,100.000031,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Objects/Outdoor/Cars/Car_04/SM_Car_04.SM_Car_04",
+          "Instance": 1
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 25,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": 102876.727,
+            "Y": -756659.688,
+            "Z": 1107.927
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

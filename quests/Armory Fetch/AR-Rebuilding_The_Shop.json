@@ -1,0 +1,104 @@
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 2,
+  "Title": "Rebuilding The Shop",
+  "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2500,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 1 Log",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Wooden_Log_01",
+            "Wooden_Log_02"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Bring me 1 Long Stick",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Long_wooden_stick"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Craft 5 Improvised Ropes",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Improvised_rope"
+          ],
+          "RequiredNum": 5
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Bring me Duct Tape",
+      "SequenceIndex": 3,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Duct_Tape"
+          ],
+          "RequiredNum": 1,
+          "MinAcceptedItemUses": 10
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Craft an Improvised Toolbox",
+      "SequenceIndex": 4,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Improvised_Tool_Box"
+          ],
+          "RequiredNum": 1,
+          "MinAcceptedItemUses": 15
+        }
+      ]
+    }
+  ]
+}

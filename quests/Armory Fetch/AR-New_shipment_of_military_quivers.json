@@ -1,0 +1,46 @@
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 2,
+  "Title": "New Shipment of Military Quivers",
+  "Description": "I'll trade you a brand new Military Quiver and $2000 for some Crafted 12 Gauge Ammo, bring me 10 rounds.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "Military_Quiver_01",
+          "Price": 5000,
+          "Amount": 1,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Craft 10 rounds of 12 Gauge Ammo",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "12_Gauge_Buckshot_Crafted"
+          ],
+          "RequiredNum": 10
+        }
+      ]
+    }
+  ]
+}

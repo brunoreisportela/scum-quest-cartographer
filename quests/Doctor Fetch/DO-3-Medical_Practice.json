@@ -1,0 +1,101 @@
+{
+  "AssociatedNpc": "Doctor",
+  "Tier": 3,
+  "Title": "Medical Practice",
+  "Description": "I need you to sabotage a corpse at the Hospital in Klenovnik, B0. No questions asked. I'l even teach you a few medical tricks. ",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 10000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Medical",
+          "Experience": 5000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find a Syringe",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": true,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Syringe"
+          ],
+          "RequiredNum": 1
+        }
+      ],
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -631429.125,
+            "Y": -154258.984,
+            "Z": 30753.473
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Locate the body at the Hospital in Klenovnik, B0",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_0_Hospital_WingB.B_0_Hospital_WingB:PersistentLevel.BP_HK_Interior_WingB_2.SM_MERGED_Int_WingB_TheaterTable",
+          "FallbackTransform": "-631402.187500,-149717.109375,30061.449219|0.000000,-89.999992,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Hospital_Klenovnik/Architecture/Meshes/Merged_Meshes/HospitalInterior/SM_MERGED_Int_WingB_TheaterTable.SM_MERGED_Int_WingB_TheaterTable",
+          "Instance": 2
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -631429.125,
+            "Y": -154258.984,
+            "Z": 30753.473
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Leave the Syringe on the Body",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Syringe"
+          ],
+          "RequiredNum": 1
+        }
+      ],
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -631429.125,
+            "Y": -154258.984,
+            "Z": 30753.473
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

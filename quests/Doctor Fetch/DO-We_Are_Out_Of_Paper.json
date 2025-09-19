@@ -1,0 +1,37 @@
+{
+  "AssociatedNpc": "Doctor",
+  "Tier": 1,
+  "Title": "A Paper Jam",
+  "Description": "Bring me some paper for my patient charts and perscriptions. I need a lot, but the reward will be worth it.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 2000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Medical",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 25 Sheets of Paper",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Paper"
+          ],
+          "RequiredNum": 25
+        }
+      ]
+    }
+  ]
+}

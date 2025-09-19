@@ -1,0 +1,160 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Quick Cash",
+  "Description": "Need money? Grab a Rag and a bar of Soap, start cleaning the place.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 5000,
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Tactics",
+          "Experience": 1000
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find a Rag",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rags"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Find a bar of Soap",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Soap"
+          ],
+          "RequiredNum": 1
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Clean the shop area",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Mechanic.Z_3_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_3.StaticMesh13",
+          "FallbackTransform": "18547.808594,-673141.687500,255.615906|0.000000,-41.336040,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_02.SM_MERG_NoMaterialMERGEDe_Meshes_02",
+          "Instance": 3
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Mechanic.Z_3_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_3.StaticMesh14",
+          "FallbackTransform": "19377.494141,-673149.625000,255.514130|0.000000,-41.336040,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_03.SM_MERG_NoMaterialMERGEDe_Meshes_03",
+          "Instance": 3
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Mechanic.Z_3_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_3.StaticMesh15",
+          "FallbackTransform": "19930.105469,-673181.250000,255.614105|0.000000,-41.336040,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_04.SM_MERG_NoMaterialMERGEDe_Meshes_04",
+          "Instance": 3
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_Outpost_Ext_Mechanic.Z_3_Outpost_Ext_Mechanic:PersistentLevel.BP_Outpost_CarShop_Building_2.SM_Car_Repair_and_Buy_Building",
+          "FallbackTransform": "19392.232422,-673269.125000,255.514130|0.000000,138.663971,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/Buildings/SM_CarShop_Building.SM_CarShop_Building",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Ext_Mechanic.A_0_Outpost_Ext_Mechanic:PersistentLevel.BP_Outpost_CarShop_Building_3.SM_Car_Repair_and_Buy_Building",
+          "FallbackTransform": "-618152.687500,-553750.062500,2370.781494|0.000000,172.964447,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/Buildings/SM_CarShop_Building.SM_CarShop_Building",
+          "Instance": 3
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Mechanic.A_0_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY2_2.StaticMesh15",
+          "FallbackTransform": "-617757.875000,-553374.375000,2370.881348|0.000000,-7.035560,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_04.SM_MERG_NoMaterialMERGEDe_Meshes_04",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Mechanic.A_0_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY2_2.StaticMesh14",
+          "FallbackTransform": "-618232.187500,-553659.625000,2370.781494|0.000000,-7.035560,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_03.SM_MERG_NoMaterialMERGEDe_Meshes_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_0_Outpost_Mechanic.A_0_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY2_2.StaticMesh13",
+          "FallbackTransform": "-618922.125000,-554120.625000,2370.881836|0.000000,-7.035560,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_02.SM_MERG_NoMaterialMERGEDe_Meshes_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Ext_Mechanic.B_4_Outpost_Ext_Mechanic:PersistentLevel.BP_Outpost_CarShop_Building2_2.SM_Car_Repair_and_Buy_Building",
+          "FallbackTransform": "573417.875000,-223362.125000,267.728027|0.000000,86.605095,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/Buildings/SM_CarShop_Building.SM_CarShop_Building",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Mechanic.B_4_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_2.StaticMesh15",
+          "FallbackTransform": "573817.875000,-223732.281250,267.828003|0.000000,-93.394897,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_04.SM_MERG_NoMaterialMERGEDe_Meshes_04",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Mechanic.B_4_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_2.StaticMesh14",
+          "FallbackTransform": "573503.062500,-223277.015625,267.728027|0.000000,-93.394897,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_03.SM_MERG_NoMaterialMERGEDe_Meshes_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_4_Outpost_Mechanic.B_4_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_FRONT_STORE_ONLY_2.StaticMesh13",
+          "FallbackTransform": "572999.187500,-222617.796875,267.828308|0.000000,-93.394897,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_02.SM_MERG_NoMaterialMERGEDe_Meshes_02",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Ext_Mechanic.C_2_Outpost_Ext_Mechanic:PersistentLevel.BP_Outpost_CarShop_Building2.SM_Car_Repair_and_Buy_Building",
+          "FallbackTransform": "-154314.062500,288226.375000,69600.500000|0.000000,-77.069405,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/Buildings/SM_CarShop_Building.SM_CarShop_Building"
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Mechanic.C_2_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_StaticMeshesOnly_2.StaticMesh15",
+          "FallbackTransform": "-154801.984375,288469.156250,69600.601562|0.000000,102.930336,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_04.SM_MERG_NoMaterialMERGEDe_Meshes_04",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Mechanic.C_2_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_StaticMeshesOnly_2.StaticMesh14",
+          "FallbackTransform": "-154371.890625,288120.718750,69600.500000|0.000000,102.930336,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_03.SM_MERG_NoMaterialMERGEDe_Meshes_03",
+          "Instance": 2
+        },
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_2_Outpost_Mechanic.C_2_Outpost_Mechanic:PersistentLevel.BP_Outpost_CarShop_StaticMeshesOnly_2.StaticMesh13",
+          "FallbackTransform": "-153703.031250,287629.718750,69600.601562|0.000000,102.930336,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Outpost/Car_Shop/MergedAssetsVT/SM_MERG_NoMaterialMERGEDe_Meshes_02.SM_MERG_NoMaterialMERGEDe_Meshes_02",
+          "Instance": 2
+        }
+      ],
+      "MinNeeded": 4,
+      "MaxNeeded": 4,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5
+    }
+  ]
+}

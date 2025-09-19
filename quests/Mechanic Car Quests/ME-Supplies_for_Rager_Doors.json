@@ -1,0 +1,152 @@
+{
+  "AssociatedNpc": "Mechanic",
+  "Tier": 2,
+  "Title": "Supplies for Rager Doors",
+  "Description": "I'm getting sick of hearing about how no one can lock their vehicles without doors! These supplies will help me build more Rager Doors. Get me 60 pieces of Scrap Metal, 12 Bolts, 12 pieces of Rubber, and 40 pieces of Glass. You might find some supplies in the Car Garage at the Boot Camp, B3",
+  "TimeLimitHours": 72.0,
+  "RewardPool": [
+    {
+      "TradeDeals": [
+        {
+          "Item": "Rager_Door_BackRight_Item",
+          "Price": 1500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Rager_Door_BackLeft_Item",
+          "Price": 1500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Rager_Door_FrontLeft_Item",
+          "Price": 1500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        },
+        {
+          "Item": "Rager_Door_FrontRight_Item",
+          "Price": 1500,
+          "Amount": 1,
+          "Fame": 200,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Check the Car Garage at the Boot Camp. B3",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": true,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_3_Military_base_03.B_3_Military_base_03:PersistentLevel.SM_Jail_Garage_Blueprint_EXT_01_CHILD_03_2.SM_Prison_Garage",
+          "FallbackTransform": "260424.750000,-32927.875000,23568.257812|0.000000,-2.955811,0.000000|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Buildings/SM_Prison_Garage.SM_Prison_Garage",
+          "Instance": 3
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 5,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": 260285.0,
+            "Y": -32927.914,
+            "Z": 23681.689
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 60 pieces of Scrap Metal",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Metal_Scrap_05",
+            "Metal_Scrap_04",
+            "Metal_Scrap_03",
+            "Metal_Scrap_02",
+            "Metal_Scrap_01"
+          ],
+          "RequiredNum": 60
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 12 Bolts",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Bolts"
+          ],
+          "RequiredNum": 12
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 12 pieces of Rubber",
+      "SequenceIndex": 3,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Rubber_sheet"
+          ],
+          "RequiredNum": 12
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Get 40 pieces of Glass",
+      "SequenceIndex": 4,
+      "CanBeAutoCompleted": true,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "1H_Improvised_Glass_Shiv",
+            "Glass",
+            "GlassBottle01",
+            "GlassBottle02",
+            "GlassBottle03",
+            "GlassBottle04",
+            "Magnifying_Glass",
+            "Magnifying_Glass1",
+            "The_Island_Special",
+            "Whiskey",
+            "Vodka",
+            "Wine",
+            "Kicmovaca",
+            "Beer"
+          ],
+          "RequiredNum": 40
+        }
+      ]
+    }
+  ]
+}

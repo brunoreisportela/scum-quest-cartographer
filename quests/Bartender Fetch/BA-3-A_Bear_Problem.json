@@ -1,0 +1,47 @@
+{
+  "AssociatedNpc": "Bartender",
+  "Tier": 3,
+  "Title": "A Bear Problem",
+  "Description": "Bears have been swarming my trash, bring me a few rounds of Shotgun Shells, and I'll give you the bear.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1500,
+      "Skills": [
+        {
+          "Skill": "Tactics",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "Bear_Torso",
+          "Price": 250,
+          "Amount": 3,
+          "Fame": 5,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Bring me 30 Shotgun Shells",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "12_Gauge_Birdshot",
+            "12_Gauge_Buckshot",
+            "12_Gauge_Buckshot_Crafted"
+          ],
+          "RequiredNum": 30
+        }
+      ]
+    }
+  ]
+}

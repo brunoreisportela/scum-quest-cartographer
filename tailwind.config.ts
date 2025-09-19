@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			spacing: {
+				'6': '0.75rem', // Override default p-6 from 1.5rem to 0.75rem
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

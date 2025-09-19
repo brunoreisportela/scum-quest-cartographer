@@ -1,0 +1,42 @@
+{
+  "AssociatedNpc": "Harbourmaster",
+  "Tier": 2,
+  "Title": "Wrecked Boat Model",
+  "Description": "My crew wrecked their boat! Follow the coast from the A0 Outpost east until you reach the bridge, under the bridge you will find an old boat. Check the model so I can get it repaired.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "CurrencyNormal": 1000,
+      "Fame": 10
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Find the boat model from the wrecked boat in A0",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Interaction",
+      "Locations": [
+        {
+          "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_0_1d.Landscape_A_0_1d:PersistentLevel.SM_Boat_03_A_0.StaticMeshComponent0",
+          "FallbackTransform": "-782057.625000,-503129.750000,97.656250|29.512966,-54.010593,-12.728199|1.001000,1.001000,1.001000",
+          "VisibleMesh": "/Game/ConZ_Files/Models/Objects/Outdoor/Boat/Boat_03/SM_Boat_03_A.SM_Boat_03_A"
+        }
+      ],
+      "MinNeeded": 1,
+      "MaxNeeded": 1,
+      "SpawnOnlyNeeded": false,
+      "WorldMarkerShowDistance": 25,
+      "LocationsShownOnMap": [
+        {
+          "Location": {
+            "X": -782158.0,
+            "Y": -503337.188,
+            "Z": 163.524
+          },
+          "SizeFactor": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 3,
+  "Title": "Tang Sword Shipment",
+  "Description": "A new shipment of swords has arrived but my display case is broken, bring the items I need to fix the shop up and I'll give you a discount on a new Sword.",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [
+    {
+      "Fame": 5,
+      "Skills": [
+        {
+          "Skill": "Survival",
+          "Experience": 1000
+        }
+      ],
+      "TradeDeals": [
+        {
+          "Item": "2H_Tang_Dao_Black_Dragon",
+          "Price": 5000,
+          "Amount": 1,
+          "Fame": 0,
+          "AllowExcluded": true
+        }
+      ]
+    }
+  ],
+  "Conditions": [
+    {
+      "TrackingCaption": "Collect 15 Scrap Metal",
+      "SequenceIndex": 0,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Metal_Scrap_01",
+            "Metal_Scrap_02",
+            "Metal_Scrap_03",
+            "Metal_Scrap_04",
+            "Metal_Scrap_05"
+          ],
+          "RequiredNum": 15
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Craft an Improvised Toolbox",
+      "SequenceIndex": 1,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Improvised_Tool_Box"
+          ],
+          "RequiredNum": 4,
+          "MinAcceptedItemUses": 15
+        }
+      ]
+    },
+    {
+      "TrackingCaption": "Craft 5 rounds of 9mm Ammo",
+      "SequenceIndex": 2,
+      "CanBeAutoCompleted": false,
+      "Type": "Fetch",
+      "DisablePurchaseOfRequiredItems": true,
+      "PlayerKeepsItems": false,
+      "RequiredItems": [
+        {
+          "AcceptedItems": [
+            "Cal_9mm_Crafted"
+          ],
+          "RequiredNum": 5
+        }
+      ]
+    }
+  ]
+}
