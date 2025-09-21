@@ -1,73 +1,203 @@
-# Welcome to your Lovable project
+# SCUM Quest Cartographer
 
-## Project info
+An interactive quest tree visualizer for the SCUM survival game, featuring a beautiful tier-based quest progression system and comprehensive server information.
 
-**URL**: https://lovable.dev/projects/e9bd97ab-f3c0-4427-90d6-74e07fce4168
+## 🎮 Features
 
-## How can I edit this code?
+- **Interactive Quest Tree**: Navigate through tier-based quest progression with visual dependencies
+- **Quest Categories**: Organized by NPCs (Armorer, Doctor, Bartender, General Goods, etc.)
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Quest Details Modal**: Detailed information about requirements, rewards, and quest types
+- **Server Information**: Integrated server IP, Discord community, and server rules
+- **Real Quest Data**: Loads actual SCUM quest data from JSON files
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e9bd97ab-f3c0-4427-90d6-74e07fce4168) and start prompting.
+- Node.js (v18 or higher) - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- npm or yarn package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. **Clone the repository**
+   ```sh
+   git clone <YOUR_GIT_URL>
+   cd scum-quest-cartographer
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Start the development server**
+   ```sh
+   npm run dev
+   ```
 
-Follow these steps:
+4. **Open your browser**
+   Navigate to `http://localhost:8080` (or the port shown in terminal)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Development
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Available Scripts
 
-# Step 3: Install the necessary dependencies.
-npm i
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # shadcn-ui components
+│   ├── CategorySelector.tsx
+│   ├── QuestTreeVisualization.tsx
+│   ├── QuestNode.tsx
+│   ├── QuestModal.tsx
+│   └── QuestDetails.tsx
+├── data/               # Quest data and utilities
+│   ├── questData.ts    # Main quest data export
+│   └── processedQuests.json # Generated quest data
+├── pages/              # Page components
+│   ├── Index.tsx       # Main quest tree page
+│   └── ServerRules.tsx # Server rules page
+├── types/              # TypeScript type definitions
+│   └── quest.ts        # Quest-related types
+├── utils/              # Utility functions
+│   ├── questLoader.ts  # Quest data transformation
+│   └── questFileLoader.ts # Advanced quest loading
+└── hooks/              # Custom React hooks
 ```
 
-**Edit a file directly in GitHub**
+## 📊 Quest Data Management
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Processing Quest Files
 
-**Use GitHub Codespaces**
+The application includes a quest processing system that converts raw SCUM quest JSON files into a format optimized for the web interface.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+#### Adding New Quests
 
-## What technologies are used for this project?
+1. **Add quest JSON files** to any folder in the `quests/` directory:
+   ```
+   quests/
+   ├── Armory/                    # Automatically detected
+   ├── Bartender/                 # Automatically detected
+   ├── Doctor/                    # Automatically detected
+   ├── General Goods/             # Automatically detected
+   ├── Harbor/                    # Automatically detected
+   ├── Mechanic Car Quests/       # Automatically detected
+   ├── Your New Category/         # Any new folder works!
+   └── Custom Quest Type/         # Flexible structure
+   ```
 
-This project is built with:
+2. **Run the quest processor** to update the application data:
+   ```sh
+   node scripts/processQuests.cjs
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **Restart the development server** to see your changes:
+   ```sh
+   npm run dev
+   ```
 
-## How can I deploy this project?
+#### Quest Processing Script
 
-Simply open [Lovable](https://lovable.dev/projects/e9bd97ab-f3c0-4427-90d6-74e07fce4168) and click on Share -> Publish.
+The `scripts/processQuests.cjs` script automatically:
+- **Discovers all folders** in the `quests/` directory
+- **Categorizes quests** based on folder names (Armory, Doctor, Mechanic, etc.)
+- **Transforms raw quest data** into frontend-friendly format
+- **Extracts requirements, rewards, and quest metadata**
+- **Groups similar quest types** under appropriate categories
+- **Outputs processed data** to `src/data/processedQuests.json`
 
-## Can I connect a custom domain to my Lovable project?
+#### Automatic Categorization
 
-Yes, you can!
+The script intelligently categorizes quest folders:
+- **Armory**: Folders containing "armory" or "armor"
+- **Banking**: Folders containing "bank"
+- **Hospitality**: Folders containing "bartender" or "bar"
+- **Medical**: Folders containing "doctor" or "medical"
+- **General Goods**: Folders containing "general" or "goods"
+- **Harbor**: Folders containing "harbor" or "fishing"
+- **Mechanic**: Folders containing "mechanic", "vehicle", or "car"
+- **Custom**: Any other folder gets its own category with a ❓ icon
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+#### Quest File Format
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The application expects SCUM quest JSON files with this structure:
+```json
+{
+  "AssociatedNpc": "Armorer",
+  "Tier": 1,
+  "Title": "Quest Name",
+  "Description": "Quest description",
+  "TimeLimitHours": 24.0,
+  "RewardPool": [...],
+  "Conditions": [...]
+}
+```
+
+### Customizing Quest Categories
+
+Edit `scripts/processQuests.cjs` to modify quest categories:
+- Add new NPC categories
+- Change category icons and descriptions
+- Adjust quest organization logic
+
+## 🎨 Technologies Used
+
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Lucide React** - Modern icon library
+- **React Router** - Client-side routing
+
+## 🌐 Deployment
+
+### DigitalOcean App Platform
+
+1. **Push your code** to a GitHub repository
+2. **Create a new app** on DigitalOcean App Platform
+3. **Connect your repository** and configure:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Node Version**: 18+
+4. **Deploy** and configure your custom domain
+
+### Other Platforms
+
+The application can be deployed to any static hosting service:
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+
+## 🎯 Server Information
+
+- **Server IP**: 70.55.144.65:7779
+- **Discord**: https://discord.gg/7xY9s6HH7J
+- **Ruleset**: Hardcore PvE
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Built for the SCUM gaming community
+- Developed by Bruno Portela
+- Quest data sourced from SCUM game files

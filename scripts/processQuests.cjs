@@ -91,6 +91,71 @@ const transformRawQuest = (rawData, filename) => {
   };
 };
 
+// Helper function to determine category info based on folder name
+const getCategoryInfo = (folderName) => {
+  const lowerName = folderName.toLowerCase();
+  
+  // Define category mappings based on folder name patterns
+  if (lowerName.includes('armory') || lowerName.includes('armor')) {
+    return {
+      id: 'armory',
+      name: 'Armory',
+      description: 'Weapon and armor related quests',
+      icon: '🏹'
+    };
+  } else if (lowerName.includes('bank')) {
+    return {
+      id: 'banking',
+      name: 'Banking',
+      description: 'Financial and trading quests',
+      icon: '💰'
+    };
+  } else if (lowerName.includes('bartender') || lowerName.includes('bar')) {
+    return {
+      id: 'hospitality',
+      name: 'Hospitality',
+      description: 'Food, drinks, and entertainment quests',
+      icon: '🍺'
+    };
+  } else if (lowerName.includes('doctor') || lowerName.includes('medical')) {
+    return {
+      id: 'medical',
+      name: 'Medical',
+      description: 'Health and medical supply quests',
+      icon: '⚕️'
+    };
+  } else if (lowerName.includes('general') || lowerName.includes('goods')) {
+    return {
+      id: 'general',
+      name: 'General Goods',
+      description: 'General trading and crafting quests',
+      icon: '📦'
+    };
+  } else if (lowerName.includes('harbor') || lowerName.includes('fishing')) {
+    return {
+      id: 'harbor',
+      name: 'Harbor',
+      description: 'Maritime and fishing related quests',
+      icon: '⚓'
+    };
+  } else if (lowerName.includes('mechanic') || lowerName.includes('vehicle') || lowerName.includes('car')) {
+    return {
+      id: 'mechanic',
+      name: 'Mechanic',
+      description: 'Vehicle maintenance and repair quests',
+      icon: '🔧'
+    };
+  } else {
+    // Default category for unknown folders
+    return {
+      id: folderName.toLowerCase().replace(/\s+/g, '-'),
+      name: folderName,
+      description: `Quests from ${folderName}`,
+      icon: '❓'
+    };
+  }
+};
+
 // Process all quest files
 async function processQuests() {
   const questsDir = path.join(__dirname, '../quests');
@@ -101,71 +166,41 @@ async function processQuests() {
     return;
   }
 
-  // Define category mappings
-  const categoryMappings = [
-    {
-      id: 'armory',
-      name: 'Armory',
-      description: 'Weapon and armor related quests from the Armorer',
-      icon: '🏹',
-      directories: ['Armory Fetch']
-    },
-    {
-      id: 'banking',
-      name: 'Banking',
-      description: 'Financial and trading quests from the Banker',
-      icon: '💰',
-      directories: ['Banker Fetch']
-    },
-    {
-      id: 'hospitality',
-      name: 'Hospitality',
-      description: 'Food, drinks, and entertainment quests from the Bartender',
-      icon: '🍺',
-      directories: ['Bartender Fetch']
-    },
-    {
-      id: 'medical',
-      name: 'Medical',
-      description: 'Health and medical supply quests from the Doctor',
-      icon: '⚕️',
-      directories: ['Doctor Fetch']
-    },
-    {
-      id: 'general',
-      name: 'General Goods',
-      description: 'General trading and crafting quests',
-      icon: '📦',
-      directories: ['General Goods Fetch', 'General Goods Interations']
-    },
-    {
-      id: 'harbor',
-      name: 'Harbor',
-      description: 'Maritime and fishing related quests',
-      icon: '⚓',
-      directories: ['Harbor Fetch', 'Harbor Interaction']
-    },
-    {
-      id: 'mechanic',
-      name: 'Mechanic',
-      description: 'Vehicle maintenance and repair quests',
-      icon: '🔧',
-      directories: ['Mechanic Car Quests', 'Mechanic Fetch', 'Mechanic Interaction']
+  console.log('Scanning quest directories...');
+  
+  // Get all directories in the quests folder
+  const allDirectories = fs.readdirSync(questsDir, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+
+  console.log(`Found ${allDirectories.length} quest directories:`, allDirectories);
+
+  // Group directories by category
+  const categoryMap = new Map();
+
+  for (const directory of allDirectories) {
+    const categoryInfo = getCategoryInfo(directory);
+    
+    if (!categoryMap.has(categoryInfo.id)) {
+      categoryMap.set(categoryInfo.id, {
+        ...categoryInfo,
+        directories: []
+      });
     }
-  ];
+    
+    categoryMap.get(categoryInfo.id).directories.push(directory);
+  }
 
   const categories = [];
 
-  for (const categoryMapping of categoryMappings) {
+  // Process each category
+  for (const [categoryId, categoryData] of categoryMap) {
     const questTypes = [];
 
-    for (const directory of categoryMapping.directories) {
+    for (const directory of categoryData.directories) {
       const dirPath = path.join(questsDir, directory);
       
-      if (!fs.existsSync(dirPath)) {
-        console.warn(`Directory not found: ${directory}`);
-        continue;
-      }
+      console.log(`Processing directory: ${directory}`);
 
       const questType = {
         id: directory.toLowerCase().replace(/\s+/g, '-'),
@@ -175,6 +210,7 @@ async function processQuests() {
       };
 
       const files = fs.readdirSync(dirPath).filter(file => file.endsWith('.json'));
+      console.log(`  Found ${files.length} quest files`);
       
       for (const file of files) {
         try {
@@ -183,21 +219,22 @@ async function processQuests() {
           const quest = transformRawQuest(rawData, file);
           questType.quests.push(quest);
         } catch (error) {
-          console.error(`Error processing ${file}:`, error.message);
+          console.error(`  Error processing ${file}:`, error.message);
         }
       }
 
       if (questType.quests.length > 0) {
         questTypes.push(questType);
+        console.log(`  Successfully processed ${questType.quests.length} quests`);
       }
     }
 
     if (questTypes.length > 0) {
       categories.push({
-        id: categoryMapping.id,
-        name: categoryMapping.name,
-        description: categoryMapping.description,
-        icon: categoryMapping.icon,
+        id: categoryData.id,
+        name: categoryData.name,
+        description: categoryData.description,
+        icon: categoryData.icon,
         types: questTypes
       });
     }

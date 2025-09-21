@@ -40,11 +40,11 @@ const Index = () => {
             <div className="flex items-center gap-2 sm:gap-4">
               <div className="relative">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                  Sentience AI Server
+                   Quest Cartographer
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-lg blur opacity-25"></div>
               </div>
-              <div className="text-sm sm:text-lg lg:text-xl font-bold text-slate-200">Quest Cartographer</div>
+              <div className="text-sm sm:text-lg lg:text-xl font-bold text-slate-200"></div>
             </div>
             <div className="hidden sm:block text-xs sm:text-sm text-slate-400 font-medium">
               Navigate • Survive • Conquer
@@ -184,14 +184,7 @@ const Index = () => {
           <div className="mt-8 pt-6 border-t border-slate-700/30 text-center">
             <p className="text-slate-500 text-sm">
               Built with ❤️ for the SCUM community • 
-              <a 
-                href="https://www.sentience.games" 
-                className="text-emerald-400 hover:text-emerald-300 ml-1 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sentience Games
-              </a>
+                by Bruno Portela
             </p>
           </div>
         </div>

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Quest data folders (contain game-specific JSON files)
+quests/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
