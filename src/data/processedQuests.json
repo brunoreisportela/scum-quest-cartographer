@@ -5136,6 +5136,142 @@
             }
           },
           {
+            "id": "GG-1-Plum_Crazy",
+            "name": "Plum Crazy",
+            "description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
+            "status": "available",
+            "tier": 2,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "10x Lighter",
+              "25x Rag Stripes",
+              "10x Vodka (or alternatives)",
+              "1x Zombie 01 Right Leg (or alternatives)"
+            ],
+            "rewards": [
+              "3000 Credits",
+              "25 Fame",
+              "2x ColorCan HazyPurple (0 Credits each)",
+              "5x CannedFruitCocktail (0 Credits each)",
+              "1000 Demolition XP"
+            ],
+            "difficulty": "Medium",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 2,
+              "Title": "Plum Crazy",
+              "Description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "CurrencyNormal": 3000,
+                  "Fame": 25,
+                  "Skills": [
+                    {
+                      "Skill": "Demolition",
+                      "Experience": 1000
+                    }
+                  ],
+                  "TradeDeals": [
+                    {
+                      "Item": "ColorCan_HazyPurple",
+                      "Price": 0,
+                      "Amount": 2,
+                      "Fame": 0,
+                      "AllowExcluded": true
+                    },
+                    {
+                      "Item": "CannedFruitCocktail",
+                      "Price": 0,
+                      "Amount": 5,
+                      "Fame": 0,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring me 10 Lighters",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Lighter"
+                      ],
+                      "RequiredNum": 10
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 25 Rag Strips",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Rag_Stripes"
+                      ],
+                      "RequiredNum": 25
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 10 Liquor Bottles",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Vodka",
+                        "Whiskey",
+                        "Tequila",
+                        "Kicmovaca",
+                        "Absinthe"
+                      ],
+                      "RequiredNum": 10
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 1 Arm or Leg",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Zombie_01_Right_Leg",
+                        "Zombie_01_Left_Leg",
+                        "Prisoner_Right_Leg",
+                        "Prisoner_Left_Leg",
+                        "Prisoner_Left_Arm",
+                        "Prisoner_Right_Arm",
+                        "Zombie_01_Left_Arm",
+                        "Zombie_01_Right_Arm"
+                      ],
+                      "RequiredNum": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": "GG-1-Rag_Strips_for_Thread",
             "name": "Rag Strips for Thread",
             "description": "I'll sell you cheap rolls of thread for 50 Rag Strips.",
@@ -7217,142 +7353,6 @@
                         "Stone"
                       ],
                       "RequiredNum": 100
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "id": "Plum_Crazy",
-            "name": "Plum Crazy",
-            "description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
-            "status": "available",
-            "tier": 2,
-            "npc": "GeneralGoods",
-            "timeLimitHours": 24,
-            "requirements": [
-              "10x Lighter",
-              "25x Rag Stripes",
-              "10x Vodka (or alternatives)",
-              "1x Zombie 01 Right Leg (or alternatives)"
-            ],
-            "rewards": [
-              "3000 Credits",
-              "25 Fame",
-              "2x ColorCan HazyPurple (0 Credits each)",
-              "5x CannedFruitCocktail (0 Credits each)",
-              "1000 Demolition XP"
-            ],
-            "difficulty": "Medium",
-            "questType": "Fetch",
-            "rawData": {
-              "AssociatedNpc": "GeneralGoods",
-              "Tier": 2,
-              "Title": "Plum Crazy",
-              "Description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
-              "TimeLimitHours": 24,
-              "RewardPool": [
-                {
-                  "CurrencyNormal": 3000,
-                  "Fame": 25,
-                  "Skills": [
-                    {
-                      "Skill": "Demolition",
-                      "Experience": 1000
-                    }
-                  ],
-                  "TradeDeals": [
-                    {
-                      "Item": "ColorCan_HazyPurple",
-                      "Price": 0,
-                      "Amount": 2,
-                      "Fame": 0,
-                      "AllowExcluded": true
-                    },
-                    {
-                      "Item": "CannedFruitCocktail",
-                      "Price": 0,
-                      "Amount": 5,
-                      "Fame": 0,
-                      "AllowExcluded": true
-                    }
-                  ]
-                }
-              ],
-              "Conditions": [
-                {
-                  "TrackingCaption": "Bring me 10 Lighters",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Lighter"
-                      ],
-                      "RequiredNum": 10
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 25 Rag Strips",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Rag_Stripes"
-                      ],
-                      "RequiredNum": 25
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 10 Liquor Bottles",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Vodka",
-                        "Whiskey",
-                        "Tequila",
-                        "Kicmovaca",
-                        "Absinthe"
-                      ],
-                      "RequiredNum": 10
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 1 Arm or Leg",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Zombie_01_Right_Leg",
-                        "Zombie_01_Left_Leg",
-                        "Prisoner_Right_Leg",
-                        "Prisoner_Left_Leg",
-                        "Prisoner_Left_Arm",
-                        "Prisoner_Right_Arm",
-                        "Zombie_01_Left_Arm",
-                        "Zombie_01_Right_Arm"
-                      ],
-                      "RequiredNum": 1
                     }
                   ]
                 }
