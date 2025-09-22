@@ -192,6 +192,27 @@ The application can be deployed to any static hosting service:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## 🤝 Collaboration & Forking
+
+If you fork this project or create improvements, **please let me know!** I'd love to:
+- **Collaborate** on new features and enhancements
+- **Reference your work** and give proper credit
+- **Learn** from your improvements and potentially merge them back
+- **Build a community** around SCUM quest tooling
+
+Feel free to:
+- Open an issue to discuss your ideas
+- Submit pull requests with improvements
+- Reach out via Discord or GitHub
+- Share your fork so others can benefit
+
+**When forking or building upon this project, please:**
+- Reference this original repository in your README
+- Consider contributing improvements back to the main project
+- Let me know about your version so I can showcase community contributions
+
+Together we can make the best SCUM quest tools for the community! 🎮
+
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).

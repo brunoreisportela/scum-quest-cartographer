@@ -6,7 +6,7 @@
   "TimeLimitHours": 24.0,
   "RewardPool": [
     {
-      "CurrencyNormal": 4000,
+      "CurrencyNormal": 5000,
       "Skills": [
         {
           "Skill": "Survival",
