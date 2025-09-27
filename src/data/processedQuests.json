@@ -11,6 +11,64 @@
         "description": "Quests from Armory",
         "quests": [
           {
+            "id": "AR-1-Bags_for_Backpack",
+            "name": "Bags for Backpack",
+            "description": "Craft me 4 Bags, and I'll give you a Backpack",
+            "status": "available",
+            "tier": 1,
+            "npc": "Armorer",
+            "timeLimitHours": 24,
+            "requirements": [
+              "4x Improvised Bag Small 02 (or alternatives)"
+            ],
+            "rewards": [
+              "5 Fame",
+              "1x Military Backpack 01 01 (50 Credits each)"
+            ],
+            "difficulty": "Easy",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "Armorer",
+              "Tier": 1,
+              "Title": "Bags for Backpack",
+              "Description": "Craft me 4 Bags, and I'll give you a Backpack",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "Fame": 5,
+                  "TradeDeals": [
+                    {
+                      "Item": "Military_Backpack_01_01",
+                      "Price": 50,
+                      "Amount": 1,
+                      "Fame": 25,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring 4 Improvised Bags",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Improvised_Bag_Small_02",
+                        "Improvised_Bag_Small_01"
+                      ],
+                      "RequiredNum": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": "AR-1-Bear_Minimum",
             "name": "Bear Minimum",
             "description": "Hunt down a Bear.  Bring me the Head.",
@@ -580,6 +638,83 @@
                         "Bolts"
                       ],
                       "RequiredNum": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": "AR-1-Starter_Rifle_Kit",
+            "name": "Starter Rifle Kit",
+            "description": "Bring me 50 Scrap Metal and I'll give you a starter Rifle Kit",
+            "status": "available",
+            "tier": 1,
+            "npc": "Armorer",
+            "timeLimitHours": 24,
+            "requirements": [
+              "50x Metal Scrap 01 (or alternatives)"
+            ],
+            "rewards": [
+              "5 Fame",
+              "1x Weapon Hunter85 V2 (0 Credits each)",
+              "5x Magazine Hunter85 V2 (0 Credits each)",
+              "5x Cal 22 Ammobox (0 Credits each)"
+            ],
+            "difficulty": "Easy",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "Armorer",
+              "Tier": 1,
+              "Title": "Starter Rifle Kit",
+              "Description": "Bring me 50 Scrap Metal and I'll give you a starter Rifle Kit",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "Fame": 5,
+                  "TradeDeals": [
+                    {
+                      "Item": "Weapon_Hunter85_V2",
+                      "Price": 0,
+                      "Amount": 1,
+                      "Fame": 5,
+                      "AllowExcluded": true
+                    },
+                    {
+                      "Item": "Magazine_Hunter85_V2",
+                      "Price": 0,
+                      "Amount": 5,
+                      "Fame": 5,
+                      "AllowExcluded": true
+                    },
+                    {
+                      "Item": "Cal_22_Ammobox",
+                      "Price": 0,
+                      "Amount": 5,
+                      "Fame": 5,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring me 50 Scrap Metal",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Metal_Scrap_01",
+                        "Metal_Scrap_02",
+                        "Metal_Scrap_03",
+                        "Metal_Scrap_04",
+                        "Metal_Scrap_05"
+                      ],
+                      "RequiredNum": 50
                     }
                   ]
                 }
@@ -1280,6 +1415,93 @@
             }
           },
           {
+            "id": "AR-3-Big_City_Blowout",
+            "name": "Big City Blowout",
+            "description": "My brother, the Samobor City DJ, has been shot. Find a battery and get that music playing! Do this for me, and I will sell you some Depleted Uranium... You have 3 hours.",
+            "status": "available",
+            "tier": 3,
+            "npc": "Armorer",
+            "timeLimitHours": 3,
+            "requirements": [
+              "1x Smartphone Battery (or alternatives)",
+              "Turn on the DJ Booth"
+            ],
+            "rewards": [
+              "30 Fame",
+              "10x Depleted Uranium (5000 Credits each)"
+            ],
+            "difficulty": "Hard",
+            "questType": "Mixed",
+            "rawData": {
+              "AssociatedNpc": "Armorer",
+              "Tier": 3,
+              "Title": "Big City Blowout",
+              "Description": "My brother, the Samobor City DJ, has been shot. Find a battery and get that music playing! Do this for me, and I will sell you some Depleted Uranium... You have 3 hours.",
+              "TimeLimitHours": 3,
+              "RewardPool": [
+                {
+                  "Fame": 30,
+                  "TradeDeals": [
+                    {
+                      "Item": "Depleted_Uranium",
+                      "Price": 5000,
+                      "Amount": 10,
+                      "Fame": 300,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Find a Small Battery",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Smartphone_Battery",
+                        "Batteries"
+                      ],
+                      "RequiredNum": 1
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Turn on the DJ Booth",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/D_4_Samobor_04_Interior_01.D_4_Samobor_04_Interior_01:PersistentLevel.StaticMeshActor55.StaticMeshComponent0",
+                      "FallbackTransform": "334214.281250,367848.750000,21047.226562|0.000000,-158.521851,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/City/DanceClub/StageEquipment/Meshes/SM_FlightCase01.SM_FlightCase01",
+                      "Instance": 1
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": 334409.562,
+                        "Y": 367627.438,
+                        "Z": 21071.416
+                      },
+                      "SizeFactor": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": "AR-3-Let_the_bodies_hit_the_floor",
             "name": "Let the bodies hit the floor",
             "description": "Kill 25 Puppets and 25 Armed Prisoners",
@@ -1333,8 +1555,8 @@
           },
           {
             "id": "AR-3-Rebuilding_The_Shop",
-            "name": "Rebuilding The Shop",
-            "description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+            "name": "Rebuilding The Cabin",
+            "description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
             "status": "available",
             "tier": 3,
             "npc": "Armorer",
@@ -1342,9 +1564,9 @@
             "requirements": [
               "32x Wooden Log Small 01 (or alternatives)",
               "24x Wooden Sticks Bundle Meduim",
-              "98x Improvised Plant Rope",
-              "1x Duct Tape",
-              "16x Improvised Tool Box"
+              "100x Improvised Plant Rope",
+              "16x Improvised Tool Box",
+              "Inspect the Cabin"
             ],
             "rewards": [
               "10000 Credits",
@@ -1352,12 +1574,12 @@
               "1000 Engineering XP"
             ],
             "difficulty": "Hard",
-            "questType": "Fetch",
+            "questType": "Mixed",
             "rawData": {
               "AssociatedNpc": "Armorer",
               "Tier": 3,
-              "Title": "Rebuilding The Shop",
-              "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+              "Title": "Rebuilding The Cabin",
+              "Description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
               "TimeLimitHours": 24,
               "RewardPool": [
                 {
@@ -1407,7 +1629,7 @@
                   ]
                 },
                 {
-                  "TrackingCaption": "Craft 98 Branch Ropes",
+                  "TrackingCaption": "Craft 100 Branch Ropes",
                   "SequenceIndex": 2,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -1418,30 +1640,13 @@
                       "AcceptedItems": [
                         "Improvised_Plant_rope"
                       ],
-                      "RequiredNum": 98
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me Duct Tape",
-                  "SequenceIndex": 3,
-                  "CanBeAutoCompleted": false,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Duct_Tape"
-                      ],
-                      "RequiredNum": 1,
-                      "MinAcceptedItemUses": 10
+                      "RequiredNum": 100
                     }
                   ]
                 },
                 {
                   "TrackingCaption": "Craft 16 Improvised Toolbox",
-                  "SequenceIndex": 4,
+                  "SequenceIndex": 3,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
@@ -1453,6 +1658,34 @@
                       ],
                       "RequiredNum": 16,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Inspect the Cabin",
+                  "SequenceIndex": 4,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_2_Cabin_01.B_2_Cabin_01:PersistentLevel.BP_Wooden_Log_Cabin_01_EXT_4.SM_WoodenLogCabin",
+                      "FallbackTransform": "-80371.343750,-245789.500000,23938.945312|0.000000,-93.871033,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/WoodenLogCabin/Rework/Objects/SM_WoodenLogCabin.SM_WoodenLogCabin",
+                      "Instance": 1
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": -80319.562,
+                        "Y": -246221.688,
+                        "Z": 23984.031
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
@@ -2584,7 +2817,7 @@
               ],
               "Conditions": [
                 {
-                  "TrackingCaption": "Bring me 5 loves of Bread",
+                  "TrackingCaption": "Bring me 5 loaves of Bread",
                   "SequenceIndex": 0,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -3311,18 +3544,18 @@
           },
           {
             "id": "BA-3-Rebuilding_The_Shop",
-            "name": "Rebuilding The Shop",
-            "description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+            "name": "Rebuilding The Cabin",
+            "description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
             "status": "available",
             "tier": 3,
             "npc": "Bartender",
             "timeLimitHours": 24,
             "requirements": [
-              "29x Wooden Log Small 01 (or alternatives)",
-              "21x Wooden Sticks Bundle Meduim",
+              "32x Wooden Log Small 01 (or alternatives)",
+              "24x Wooden Sticks Bundle Meduim",
               "100x Improvised Plant Rope",
-              "1x Duct Tape",
-              "16x Improvised Tool Box"
+              "16x Improvised Tool Box",
+              "Inspect the Cabin"
             ],
             "rewards": [
               "10000 Credits",
@@ -3330,12 +3563,12 @@
               "1000 Engineering XP"
             ],
             "difficulty": "Hard",
-            "questType": "Fetch",
+            "questType": "Mixed",
             "rawData": {
               "AssociatedNpc": "Bartender",
               "Tier": 3,
-              "Title": "Rebuilding The Shop",
-              "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+              "Title": "Rebuilding The Cabin",
+              "Description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
               "TimeLimitHours": 24,
               "RewardPool": [
                 {
@@ -3351,9 +3584,9 @@
               ],
               "Conditions": [
                 {
-                  "TrackingCaption": "Bring me 29 Small Wooden Logs",
+                  "TrackingCaption": "Bring me 32 Small Wooden Logs",
                   "SequenceIndex": 0,
-                  "CanBeAutoCompleted": false,
+                  "CanBeAutoCompleted": true,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
                   "PlayerKeepsItems": false,
@@ -3364,12 +3597,12 @@
                         "Wooden_Log_Small_02",
                         "Wooden_Log_Small_03"
                       ],
-                      "RequiredNum": 29
+                      "RequiredNum": 32
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me 21 Small Stick Bundles",
+                  "TrackingCaption": "Bring me 24 Small Stick Bundles",
                   "SequenceIndex": 1,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -3380,7 +3613,7 @@
                       "AcceptedItems": [
                         "Wooden_Sticks_Bundle_Meduim"
                       ],
-                      "RequiredNum": 21
+                      "RequiredNum": 24
                     }
                   ]
                 },
@@ -3401,25 +3634,8 @@
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me Duct Tape",
-                  "SequenceIndex": 3,
-                  "CanBeAutoCompleted": false,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Duct_Tape"
-                      ],
-                      "RequiredNum": 1,
-                      "MinAcceptedItemUses": 10
-                    }
-                  ]
-                },
-                {
                   "TrackingCaption": "Craft 16 Improvised Toolbox",
-                  "SequenceIndex": 4,
+                  "SequenceIndex": 3,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
@@ -3431,6 +3647,34 @@
                       ],
                       "RequiredNum": 16,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Inspect the Cabin",
+                  "SequenceIndex": 4,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_3_Mountain_Shed.B_3_Mountain_Shed:PersistentLevel.BP_Wooden_Log_Cabin_01_EXT_2.SM_WoodenLogCabin",
+                      "FallbackTransform": "175046.375000,-199679.031250,29045.210938|0.000000,90.145645,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/WoodenLogCabin/Rework/Objects/SM_WoodenLogCabin.SM_WoodenLogCabin",
+                      "Instance": 2
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": 174711.641,
+                        "Y": -199362.141,
+                        "Z": 29097.879
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
@@ -4224,18 +4468,18 @@
           },
           {
             "id": "DO-3-Rebuilding_The_Shop",
-            "name": "Rebuilding The Shop",
-            "description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+            "name": "Rebuilding The Cabin",
+            "description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
             "status": "available",
             "tier": 3,
             "npc": "Doctor",
             "timeLimitHours": 24,
             "requirements": [
-              "28x Wooden Log Small 01 (or alternatives)",
-              "21x Wooden Sticks Bundle Meduim",
-              "96x Improvised Plant Rope",
-              "1x Duct Tape",
-              "16x Improvised Tool Box"
+              "32x Wooden Log Small 01 (or alternatives)",
+              "24x Wooden Sticks Bundle Meduim",
+              "100x Improvised Plant Rope",
+              "16x Improvised Tool Box",
+              "Inspect the Cabin"
             ],
             "rewards": [
               "10000 Credits",
@@ -4243,12 +4487,12 @@
               "1000 Engineering XP"
             ],
             "difficulty": "Hard",
-            "questType": "Fetch",
+            "questType": "Mixed",
             "rawData": {
               "AssociatedNpc": "Doctor",
               "Tier": 3,
-              "Title": "Rebuilding The Shop",
-              "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+              "Title": "Rebuilding The Cabin",
+              "Description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
               "TimeLimitHours": 24,
               "RewardPool": [
                 {
@@ -4264,7 +4508,7 @@
               ],
               "Conditions": [
                 {
-                  "TrackingCaption": "Bring me 28 Small Wooden Logs",
+                  "TrackingCaption": "Bring me 32 Small Wooden Logs",
                   "SequenceIndex": 0,
                   "CanBeAutoCompleted": true,
                   "Type": "Fetch",
@@ -4277,12 +4521,12 @@
                         "Wooden_Log_Small_02",
                         "Wooden_Log_Small_03"
                       ],
-                      "RequiredNum": 28
+                      "RequiredNum": 32
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me 21 Small Stick Bundles",
+                  "TrackingCaption": "Bring me 24 Small Stick Bundles",
                   "SequenceIndex": 1,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -4293,12 +4537,12 @@
                       "AcceptedItems": [
                         "Wooden_Sticks_Bundle_Meduim"
                       ],
-                      "RequiredNum": 21
+                      "RequiredNum": 24
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Craft 96 Branch Ropes",
+                  "TrackingCaption": "Craft 100 Branch Ropes",
                   "SequenceIndex": 2,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -4309,30 +4553,13 @@
                       "AcceptedItems": [
                         "Improvised_Plant_rope"
                       ],
-                      "RequiredNum": 96
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me Duct Tape",
-                  "SequenceIndex": 3,
-                  "CanBeAutoCompleted": false,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Duct_Tape"
-                      ],
-                      "RequiredNum": 1,
-                      "MinAcceptedItemUses": 10
+                      "RequiredNum": 100
                     }
                   ]
                 },
                 {
                   "TrackingCaption": "Craft 16 Improvised Toolbox",
-                  "SequenceIndex": 4,
+                  "SequenceIndex": 3,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
@@ -4344,6 +4571,34 @@
                       ],
                       "RequiredNum": 16,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Inspect the Cabin",
+                  "SequenceIndex": 4,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_1_Cabin_01.A_1_Cabin_01:PersistentLevel.BP_Wooden_Log_Cabin_02_EXT_2.SM_WoodenLogCabin",
+                      "FallbackTransform": "-487926.687500,-308515.468750,12661.939453|0.000000,-33.678974,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/WoodenLogCabin/Rework/Objects/SM_WoodenLogCabin.SM_WoodenLogCabin",
+                      "Instance": 1
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": -487613.281,
+                        "Y": -308776,
+                        "Z": 12797.09
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
@@ -4422,6 +4677,64 @@
                         "Sock_01"
                       ],
                       "RequiredNum": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": "GG-1-Bags_for_Backpack",
+            "name": "Bags for Backpack",
+            "description": "Craft me 2 Bags, and I'll give you a Backpack",
+            "status": "available",
+            "tier": 1,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "2x Improvised Bag Small 02 (or alternatives)"
+            ],
+            "rewards": [
+              "5 Fame",
+              "1x Backpack 02 01 (50 Credits each)"
+            ],
+            "difficulty": "Easy",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 1,
+              "Title": "Bags for Backpack",
+              "Description": "Craft me 2 Bags, and I'll give you a Backpack",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "Fame": 5,
+                  "TradeDeals": [
+                    {
+                      "Item": "Backpack_02_01",
+                      "Price": 50,
+                      "Amount": 1,
+                      "Fame": 25,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring 2 Improvised Bags",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Improvised_Bag_Small_02",
+                        "Improvised_Bag_Small_01"
+                      ],
+                      "RequiredNum": 2
                     }
                   ]
                 }
@@ -4690,6 +5003,109 @@
             }
           },
           {
+            "id": "GG-1-Fantasmas_da_Segunda_Guerra_(Ghosts_of_WWII)",
+            "name": "Fantasmas da Segunda Guerra (Ghosts of WWII)",
+            "description": "Bunkers da guerra ainda ecoam histórias de sangue. Enfrente a resistência e investigue um bunker antigo. (War bunkers still echo with tales of bloodshed. Face the resistance and investigate an ancient bunker.)",
+            "status": "available",
+            "tier": 1,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "Interact with 1 communication panel or box inside a WWII bunker"
+            ],
+            "rewards": [
+              "2500 Credits",
+              "10 Fame"
+            ],
+            "difficulty": "Easy",
+            "questType": "Interaction",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 1,
+              "Title": "Fantasmas da Segunda Guerra (Ghosts of WWII)",
+              "Description": "Bunkers da guerra ainda ecoam histórias de sangue. Enfrente a resistência e investigue um bunker antigo. (War bunkers still echo with tales of bloodshed. Face the resistance and investigate an ancient bunker.)",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "CurrencyNormal": 2500,
+                  "Fame": 10
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Interact with 1 communication panel or box inside a WWII bunker",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/C_3_WW2_Bunker_01.C_3_WW2_Bunker_01:PersistentLevel.BP_Bunker_5.StaticMesh74",
+                      "FallbackTransform": "31298.634766,197714.031250,68151.023438|0.000000,160.018631,0.000000|1.001000,0.846569,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Objects/PowerBoxes/PowerBox_01/SM_PowerBox_01.SM_PowerBox_01",
+                      "Instance": 1
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_4_WW2_Bunker_03.A_4_WW2_Bunker_03:PersistentLevel.BP_Bunker_Small_02_2.StaticMesh74",
+                      "FallbackTransform": "555738.875000,-310779.281250,1171.800049|0.000000,-149.999741,0.000000|1.001000,0.846569,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Objects/PowerBoxes/PowerBox_01/SM_PowerBox_01.SM_PowerBox_01",
+                      "Instance": 3
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_1_WW2_Bunker_01.A_1_WW2_Bunker_01:PersistentLevel.BP_Bunker_Small_6.StaticMesh74",
+                      "FallbackTransform": "-584287.625000,-502333.031250,9244.138672|0.000000,-129.999832,0.000000|1.001000,0.846569,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Objects/PowerBoxes/PowerBox_01/SM_PowerBox_01.SM_PowerBox_01",
+                      "Instance": 1
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Z_3_WW2_Bunker_03.Z_3_WW2_Bunker_03:PersistentLevel.BP_Bunker_Small_03_2.StaticMesh74",
+                      "FallbackTransform": "66372.828125,-699951.062500,4494.510742|0.000000,-18.820190,0.000000|1.001000,0.846569,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/Prison/Objects/PowerBoxes/PowerBox_01/SM_PowerBox_01.SM_PowerBox_01",
+                      "Instance": 3
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 100,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": 31290.826,
+                        "Y": 197625,
+                        "Z": 68155.234
+                      },
+                      "SizeFactor": 1
+                    },
+                    {
+                      "Location": {
+                        "X": 66377.578,
+                        "Y": -699863.812,
+                        "Z": 4498.724
+                      },
+                      "SizeFactor": 1
+                    },
+                    {
+                      "Location": {
+                        "X": 555807.062,
+                        "Y": -310851.062,
+                        "Z": 1176.013
+                      },
+                      "SizeFactor": 1
+                    },
+                    {
+                      "Location": {
+                        "X": -584224.688,
+                        "Y": -502399.625,
+                        "Z": 9248.352
+                      },
+                      "SizeFactor": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": "GG-1-Fishy",
             "name": "I Smell Something Fishy",
             "description": "The vendor at the Saloon is outselling my fresh foods! Grab a fish and wipe it all over the furniture on the second floor! No one will want her goods then!",
@@ -4831,6 +5247,55 @@
                   "MaxNeeded": 1,
                   "SpawnOnlyNeeded": false,
                   "WorldMarkerShowDistance": 5
+                }
+              ]
+            }
+          },
+          {
+            "id": "GG-1-Improvised_Stone_Knives_for_Cash",
+            "name": "Improvised Stone Knives for Cash",
+            "description": "Craft me 10 Improvised Knives and I'll give you some cash",
+            "status": "available",
+            "tier": 1,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "10x 1H ImprovisedKnife"
+            ],
+            "rewards": [
+              "500 Credits",
+              "5 Fame"
+            ],
+            "difficulty": "Easy",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 1,
+              "Title": "Improvised Stone Knives for Cash",
+              "Description": "Craft me 10 Improvised Knives and I'll give you some cash",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "CurrencyNormal": 500,
+                  "Fame": 5
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring me 10 Improvised Stone Knives",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "1H_ImprovisedKnife"
+                      ],
+                      "RequiredNum": 10
+                    }
+                  ]
                 }
               ]
             }
@@ -5136,142 +5601,6 @@
             }
           },
           {
-            "id": "GG-1-Plum_Crazy",
-            "name": "Plum Crazy",
-            "description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
-            "status": "available",
-            "tier": 2,
-            "npc": "GeneralGoods",
-            "timeLimitHours": 24,
-            "requirements": [
-              "10x Lighter",
-              "25x Rag Stripes",
-              "10x Vodka (or alternatives)",
-              "1x Zombie 01 Right Leg (or alternatives)"
-            ],
-            "rewards": [
-              "3000 Credits",
-              "25 Fame",
-              "2x ColorCan HazyPurple (0 Credits each)",
-              "5x CannedFruitCocktail (0 Credits each)",
-              "1000 Demolition XP"
-            ],
-            "difficulty": "Medium",
-            "questType": "Fetch",
-            "rawData": {
-              "AssociatedNpc": "GeneralGoods",
-              "Tier": 2,
-              "Title": "Plum Crazy",
-              "Description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
-              "TimeLimitHours": 24,
-              "RewardPool": [
-                {
-                  "CurrencyNormal": 3000,
-                  "Fame": 25,
-                  "Skills": [
-                    {
-                      "Skill": "Demolition",
-                      "Experience": 1000
-                    }
-                  ],
-                  "TradeDeals": [
-                    {
-                      "Item": "ColorCan_HazyPurple",
-                      "Price": 0,
-                      "Amount": 2,
-                      "Fame": 0,
-                      "AllowExcluded": true
-                    },
-                    {
-                      "Item": "CannedFruitCocktail",
-                      "Price": 0,
-                      "Amount": 5,
-                      "Fame": 0,
-                      "AllowExcluded": true
-                    }
-                  ]
-                }
-              ],
-              "Conditions": [
-                {
-                  "TrackingCaption": "Bring me 10 Lighters",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Lighter"
-                      ],
-                      "RequiredNum": 10
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 25 Rag Strips",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Rag_Stripes"
-                      ],
-                      "RequiredNum": 25
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 10 Liquor Bottles",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Vodka",
-                        "Whiskey",
-                        "Tequila",
-                        "Kicmovaca",
-                        "Absinthe"
-                      ],
-                      "RequiredNum": 10
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me 1 Arm or Leg",
-                  "SequenceIndex": 0,
-                  "CanBeAutoCompleted": true,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Zombie_01_Right_Leg",
-                        "Zombie_01_Left_Leg",
-                        "Prisoner_Right_Leg",
-                        "Prisoner_Left_Leg",
-                        "Prisoner_Left_Arm",
-                        "Prisoner_Right_Arm",
-                        "Zombie_01_Left_Arm",
-                        "Zombie_01_Right_Arm"
-                      ],
-                      "RequiredNum": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
             "id": "GG-1-Rag_Strips_for_Thread",
             "name": "Rag Strips for Thread",
             "description": "I'll sell you cheap rolls of thread for 50 Rag Strips.",
@@ -5320,6 +5649,153 @@
                         "Rag_Stripes"
                       ],
                       "RequiredNum": 50
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": "GG-1-Segredos_Subterrâneos_(Underground_Secrets)",
+            "name": "Segredos Subterrâneos (Underground Secrets)",
+            "description": "Muitos esconderijos ainda estão trancados. Explore uma caverna e verifique o cofre principal. (Many hiding places are still locked. Explore a cave and check the main vault.)",
+            "status": "available",
+            "tier": 1,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "Interact with 1 Underground Vault"
+            ],
+            "rewards": [
+              "2500 Credits",
+              "10 Fame"
+            ],
+            "difficulty": "Easy",
+            "questType": "Interaction",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 1,
+              "Title": "Segredos Subterrâneos (Underground Secrets)",
+              "Description": "Muitos esconderijos ainda estão trancados. Explore uma caverna e verifique o cofre principal. (Many hiding places are still locked. Explore a cave and check the main vault.)",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "CurrencyNormal": 2500,
+                  "Fame": 10
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Interact with 1 Underground Vault",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Big_Rock_01_05_2.StaticMeshComponent0",
+                      "FallbackTransform": "-552574.250000,-475081.875000,-372.927734|0.000000,0.000000,0.000000|0.472100,0.472100,0.472100",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_05.Big_Rock_01_05",
+                      "Instance": 2
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Big_Rock_01_01_1.StaticMeshComponent0",
+                      "FallbackTransform": "-552135.375000,-475513.562500,-339.992523|0.000000,41.174751,0.000000|0.741810,0.741810,0.741810",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_01.Big_Rock_01_01",
+                      "Instance": 1
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Cave_Rock_Floor_Set_01_01_0.StaticMeshComponent0",
+                      "FallbackTransform": "-551909.562500,-475426.218750,-349.525482|0.000000,0.000000,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Floor_Rocks_01/Underwater/Cave_Rock_Floor_Set_01_01.Cave_Rock_Floor_Set_01_01"
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Big_Rock_01_03_0.StaticMeshComponent0",
+                      "FallbackTransform": "-551825.812500,-474930.000000,-365.166840|0.000000,129.825577,0.000000|0.510446,0.510446,0.510446",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_03.Big_Rock_01_03"
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Big_Rock_01_04_2.StaticMeshComponent0",
+                      "FallbackTransform": "-552398.750000,-474814.468750,-324.158936|0.000000,-77.264442,0.000000|0.270227,0.270227,0.270227",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_04.Big_Rock_01_04",
+                      "Instance": 2
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_A_1_1c.Landscape_A_1_1c:PersistentLevel.Big_Rock_01_01_2.StaticMeshComponent0",
+                      "FallbackTransform": "-552499.312500,-475394.500000,-419.437103|48.723042,125.965782,94.832298|0.741810,0.741810,0.741810",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_01.Big_Rock_01_01",
+                      "Instance": 2
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_B_4_2b.Landscape_B_4_2b:PersistentLevel.Big_Rock_01_198.StaticMeshComponent0",
+                      "FallbackTransform": "603755.125000,-254981.296875,-1082.465576|-4.163451,85.988785,-45.996876|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_04.Big_Rock_01_04",
+                      "Instance": 198
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_B_4_2b.Landscape_B_4_2b:PersistentLevel.Big_Rock_01_197.StaticMeshComponent0",
+                      "FallbackTransform": "603377.750000,-255728.734375,-692.409058|9.518777,23.282322,-21.022392|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Rocks_Walls_01/Underwater/Big_Rock_01_05.Big_Rock_01_05",
+                      "Instance": 197
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_B_4_2b.Landscape_B_4_2b:PersistentLevel.Cave_Rock_Floor_Set_01_10.StaticMeshComponent0",
+                      "FallbackTransform": "603603.500000,-255743.390625,-1225.663940|-29.247524,68.583847,3.677672|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Cave_Floor_Rocks_01/Underwater/Cave_Rock_Floor_Set_01_05.Cave_Rock_Floor_Set_01_05",
+                      "Instance": 10
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_Z_3_4b.Landscape_Z_3_4b:PersistentLevel.InstancedFoliageActor_0.FoliageInstancedStaticMeshComponent_32",
+                      "FallbackTransform": "253284.015625,-702240.937500,-112.423111|3.327033,-178.372437,2.387205|0.271889,0.271889,0.271889",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Coastal_Rock_03/Coastal_Rock_03_02.Coastal_Rock_03_02",
+                      "Instance": 7
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_Z_3_4b.Landscape_Z_3_4b:PersistentLevel.InstancedFoliageActor_0.FoliageInstancedStaticMeshComponent_32",
+                      "FallbackTransform": "253301.859375,-702704.062500,-87.750000|1.957641,-69.993866,-0.912350|0.458596,0.458596,0.458596",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Coastal_Rock_03/Coastal_Rock_03_02.Coastal_Rock_03_02",
+                      "Instance": 8
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_Z_3_4b.Landscape_Z_3_4b:PersistentLevel.InstancedFoliageActor_0.FoliageInstancedStaticMeshComponent_33",
+                      "FallbackTransform": "253872.812500,-702611.812500,-121.790100|1.365894,44.000080,0.683931|0.596856,0.596856,0.596856",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Coastal_Rock_03/Coastal_Rock_03_03.Coastal_Rock_03_03",
+                      "Instance": 6
+                    },
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/Landscape_Z_3_4b.Landscape_Z_3_4b:PersistentLevel.InstancedFoliageActor_0.FoliageInstancedStaticMeshComponent_32",
+                      "FallbackTransform": "253635.515625,-702019.875000,-93.170959|3.327033,-41.519245,2.387205|0.271889,0.271889,0.271889",
+                      "VisibleMesh": "/Game/ConZ_Files/Landscape/Rocks/Coastal_Rock_03/Coastal_Rock_03_02.Coastal_Rock_03_02",
+                      "Instance": 6
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": false,
+                  "WorldMarkerShowDistance": 100,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": -552270.875,
+                        "Y": -475161,
+                        "Z": -23.708
+                      },
+                      "SizeFactor": 1
+                    },
+                    {
+                      "Location": {
+                        "X": 605002.688,
+                        "Y": -255033.312,
+                        "Z": -867.982
+                      },
+                      "SizeFactor": 1
+                    },
+                    {
+                      "Location": {
+                        "X": 253555.078,
+                        "Y": -702338.812,
+                        "Z": -23.624
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
@@ -5545,6 +6021,61 @@
                       ],
                       "RequiredNum": 1,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": "GG-1-Stones_for_Bricks",
+            "name": "Stones for Bricks",
+            "description": "Find me 10 Stones and I'll turn them into Bricks",
+            "status": "available",
+            "tier": 1,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "10x Stone"
+            ],
+            "rewards": [
+              "2x Bundle Of Bricks (300 Credits each)"
+            ],
+            "difficulty": "Easy",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 1,
+              "Title": "Stones for Bricks",
+              "Description": "Find me 10 Stones and I'll turn them into Bricks",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "TradeDeals": [
+                    {
+                      "Item": "Bundle_Of_Bricks",
+                      "Price": 300,
+                      "Amount": 2,
+                      "Fame": 25,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring me 10 Stones",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Stone"
+                      ],
+                      "RequiredNum": 10
                     }
                   ]
                 }
@@ -6625,6 +7156,142 @@
             }
           },
           {
+            "id": "GG-2-Plum_Crazy",
+            "name": "Plum Crazy",
+            "description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
+            "status": "available",
+            "tier": 2,
+            "npc": "GeneralGoods",
+            "timeLimitHours": 24,
+            "requirements": [
+              "10x Lighter",
+              "25x Rag Stripes",
+              "10x Vodka (or alternatives)",
+              "1x Zombie 01 Right Leg (or alternatives)"
+            ],
+            "rewards": [
+              "3000 Credits",
+              "25 Fame",
+              "2x ColorCan HazyPurple (0 Credits each)",
+              "5x CannedFruitCocktail (0 Credits each)",
+              "1000 Demolition XP"
+            ],
+            "difficulty": "Medium",
+            "questType": "Fetch",
+            "rawData": {
+              "AssociatedNpc": "GeneralGoods",
+              "Tier": 2,
+              "Title": "Plum Crazy",
+              "Description": "Plum is having a little trouble with the locals in the town nearby. Several sketchy individuals were seen scouting on Plum's land so she has decided to send them a message about boundaries.  Plum has a plan. She's managed to capture several puppets to aid her in execution of said plan but she still needs a few more items.  Each puppet will be strapped with a molotov to it's back and an arm or a leg tied to a stick and mounted from the puppet's head to lead it into battle at the center of town.  ",
+              "TimeLimitHours": 24,
+              "RewardPool": [
+                {
+                  "CurrencyNormal": 3000,
+                  "Fame": 25,
+                  "Skills": [
+                    {
+                      "Skill": "Demolition",
+                      "Experience": 1000
+                    }
+                  ],
+                  "TradeDeals": [
+                    {
+                      "Item": "ColorCan_HazyPurple",
+                      "Price": 0,
+                      "Amount": 2,
+                      "Fame": 0,
+                      "AllowExcluded": true
+                    },
+                    {
+                      "Item": "CannedFruitCocktail",
+                      "Price": 0,
+                      "Amount": 5,
+                      "Fame": 0,
+                      "AllowExcluded": true
+                    }
+                  ]
+                }
+              ],
+              "Conditions": [
+                {
+                  "TrackingCaption": "Bring me 10 Lighters",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Lighter"
+                      ],
+                      "RequiredNum": 10
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 25 Rag Strips",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Rag_Stripes"
+                      ],
+                      "RequiredNum": 25
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 10 Liquor Bottles",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Vodka",
+                        "Whiskey",
+                        "Tequila",
+                        "Kicmovaca",
+                        "Absinthe"
+                      ],
+                      "RequiredNum": 10
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Bring me 1 Arm or Leg",
+                  "SequenceIndex": 0,
+                  "CanBeAutoCompleted": true,
+                  "Type": "Fetch",
+                  "DisablePurchaseOfRequiredItems": true,
+                  "PlayerKeepsItems": false,
+                  "RequiredItems": [
+                    {
+                      "AcceptedItems": [
+                        "Zombie_01_Right_Leg",
+                        "Zombie_01_Left_Leg",
+                        "Prisoner_Right_Leg",
+                        "Prisoner_Left_Leg",
+                        "Prisoner_Left_Arm",
+                        "Prisoner_Right_Arm",
+                        "Zombie_01_Left_Arm",
+                        "Zombie_01_Right_Arm"
+                      ],
+                      "RequiredNum": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": "GG-2-Repairs_for_Propane",
             "name": "Repairs for Propane",
             "description": "Gather a Hammer and a few Nails, I want you to fix my roof. I will give you a deal on some Propane.",
@@ -7153,18 +7820,18 @@
           },
           {
             "id": "GG-3-Rebuilding_The_Shop",
-            "name": "Rebuilding The Shop",
-            "description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+            "name": "Rebuilding The Cabin",
+            "description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
             "status": "available",
             "tier": 3,
             "npc": "GeneralGoods",
             "timeLimitHours": 24,
             "requirements": [
-              "31x Wooden Log Small 01 (or alternatives)",
-              "23x Wooden Sticks Bundle Meduim",
-              "94x Improvised Plant Rope",
-              "1x Duct Tape",
-              "16x Improvised Tool Box"
+              "32x Wooden Log Small 01 (or alternatives)",
+              "24x Wooden Sticks Bundle Meduim",
+              "100x Improvised Plant Rope",
+              "16x Improvised Tool Box",
+              "Inspect the Cabin"
             ],
             "rewards": [
               "10000 Credits",
@@ -7172,12 +7839,12 @@
               "1000 Engineering XP"
             ],
             "difficulty": "Hard",
-            "questType": "Fetch",
+            "questType": "Mixed",
             "rawData": {
               "AssociatedNpc": "GeneralGoods",
               "Tier": 3,
-              "Title": "Rebuilding The Shop",
-              "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+              "Title": "Rebuilding The Cabin",
+              "Description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
               "TimeLimitHours": 24,
               "RewardPool": [
                 {
@@ -7193,9 +7860,9 @@
               ],
               "Conditions": [
                 {
-                  "TrackingCaption": "Bring me 31 Small Wooden Logs",
+                  "TrackingCaption": "Bring me 32 Small Wooden Logs",
                   "SequenceIndex": 0,
-                  "CanBeAutoCompleted": false,
+                  "CanBeAutoCompleted": true,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
                   "PlayerKeepsItems": false,
@@ -7206,12 +7873,12 @@
                         "Wooden_Log_Small_02",
                         "Wooden_Log_Small_03"
                       ],
-                      "RequiredNum": 31
+                      "RequiredNum": 32
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me 23 Small Stick Bundles",
+                  "TrackingCaption": "Bring me 24 Small Stick Bundles",
                   "SequenceIndex": 1,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -7222,12 +7889,12 @@
                       "AcceptedItems": [
                         "Wooden_Sticks_Bundle_Meduim"
                       ],
-                      "RequiredNum": 23
+                      "RequiredNum": 24
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Craft 94 Branch Ropes",
+                  "TrackingCaption": "Craft 100 Branch Ropes",
                   "SequenceIndex": 2,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -7238,30 +7905,13 @@
                       "AcceptedItems": [
                         "Improvised_Plant_rope"
                       ],
-                      "RequiredNum": 94
-                    }
-                  ]
-                },
-                {
-                  "TrackingCaption": "Bring me Duct Tape",
-                  "SequenceIndex": 3,
-                  "CanBeAutoCompleted": false,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Duct_Tape"
-                      ],
-                      "RequiredNum": 1,
-                      "MinAcceptedItemUses": 10
+                      "RequiredNum": 100
                     }
                   ]
                 },
                 {
                   "TrackingCaption": "Craft 16 Improvised Toolbox",
-                  "SequenceIndex": 4,
+                  "SequenceIndex": 3,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
@@ -7273,6 +7923,34 @@
                       ],
                       "RequiredNum": 16,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Inspect the Cabin",
+                  "SequenceIndex": 4,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/A_1_Cabin_01.A_1_Cabin_01:PersistentLevel.BP_Wooden_Log_Cabin_02_EXT_2.SM_WoodenLogCabin",
+                      "FallbackTransform": "-487926.687500,-308515.468750,12661.939453|0.000000,-33.678974,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/WoodenLogCabin/Rework/Objects/SM_WoodenLogCabin.SM_WoodenLogCabin",
+                      "Instance": 1
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": -487613.281,
+                        "Y": -308776,
+                        "Z": 12797.09
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
@@ -7289,7 +7967,7 @@
             "timeLimitHours": 24,
             "requirements": [
               "10x Improvised Plant Rope",
-              "100x Stone"
+              "100x Stone Small"
             ],
             "rewards": [
               "10x Bundle Of Bricks (300 Credits each)",
@@ -7341,7 +8019,7 @@
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me 100 Large Rocks",
+                  "TrackingCaption": "Bring me 100 Small Stones",
                   "SequenceIndex": 0,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -7350,7 +8028,7 @@
                   "RequiredItems": [
                     {
                       "AcceptedItems": [
-                        "Stone"
+                        "Stone_Small"
                       ],
                       "RequiredNum": 100
                     }
@@ -11771,18 +12449,18 @@
           },
           {
             "id": "ME-3-Rebuilding_The_Shop",
-            "name": "Rebuilding The Shop",
-            "description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+            "name": "Rebuilding The Cabin",
+            "description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
             "status": "available",
             "tier": 3,
             "npc": "Mechanic",
             "timeLimitHours": 24,
             "requirements": [
-              "30x Wooden Log Small 01 (or alternatives)",
-              "22x Wooden Sticks Bundle Meduim",
+              "32x Wooden Log Small 01 (or alternatives)",
+              "24x Wooden Sticks Bundle Meduim",
               "100x Improvised Plant Rope",
-              "1x Duct Tape",
-              "16x Improvised Tool Box"
+              "16x Improvised Tool Box",
+              "Inspect the Cabin"
             ],
             "rewards": [
               "10000 Credits",
@@ -11790,12 +12468,12 @@
               "1000 Engineering XP"
             ],
             "difficulty": "Hard",
-            "questType": "Fetch",
+            "questType": "Mixed",
             "rawData": {
               "AssociatedNpc": "Mechanic",
               "Tier": 3,
-              "Title": "Rebuilding The Shop",
-              "Description": "I'm rebuilding the shop and I need some construction materials. Help me and I'll give you some cash.",
+              "Title": "Rebuilding The Cabin",
+              "Description": "I'm rebuilding the cabin and I need some construction materials. Help me and I'll give you some cash.",
               "TimeLimitHours": 24,
               "RewardPool": [
                 {
@@ -11811,9 +12489,9 @@
               ],
               "Conditions": [
                 {
-                  "TrackingCaption": "Bring me 30 Small Wooden Logs",
+                  "TrackingCaption": "Bring me 32 Small Wooden Logs",
                   "SequenceIndex": 0,
-                  "CanBeAutoCompleted": false,
+                  "CanBeAutoCompleted": true,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
                   "PlayerKeepsItems": false,
@@ -11824,12 +12502,12 @@
                         "Wooden_Log_Small_02",
                         "Wooden_Log_Small_03"
                       ],
-                      "RequiredNum": 30
+                      "RequiredNum": 32
                     }
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me 22 Small Stick Bundles",
+                  "TrackingCaption": "Bring me 24 Small Stick Bundles",
                   "SequenceIndex": 1,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
@@ -11840,7 +12518,7 @@
                       "AcceptedItems": [
                         "Wooden_Sticks_Bundle_Meduim"
                       ],
-                      "RequiredNum": 22
+                      "RequiredNum": 24
                     }
                   ]
                 },
@@ -11861,25 +12539,8 @@
                   ]
                 },
                 {
-                  "TrackingCaption": "Bring me Duct Tape",
-                  "SequenceIndex": 3,
-                  "CanBeAutoCompleted": false,
-                  "Type": "Fetch",
-                  "DisablePurchaseOfRequiredItems": true,
-                  "PlayerKeepsItems": false,
-                  "RequiredItems": [
-                    {
-                      "AcceptedItems": [
-                        "Duct_Tape"
-                      ],
-                      "RequiredNum": 1,
-                      "MinAcceptedItemUses": 10
-                    }
-                  ]
-                },
-                {
                   "TrackingCaption": "Craft 16 Improvised Toolbox",
-                  "SequenceIndex": 4,
+                  "SequenceIndex": 3,
                   "CanBeAutoCompleted": false,
                   "Type": "Fetch",
                   "DisablePurchaseOfRequiredItems": true,
@@ -11891,6 +12552,34 @@
                       ],
                       "RequiredNum": 16,
                       "MinAcceptedItemUses": 15
+                    }
+                  ]
+                },
+                {
+                  "TrackingCaption": "Inspect the Cabin",
+                  "SequenceIndex": 4,
+                  "CanBeAutoCompleted": false,
+                  "Type": "Interaction",
+                  "Locations": [
+                    {
+                      "AnchorMesh": "/Game/ConZ_Files/Maps/The_Island/B_1_Site_01.B_1_Site_01:PersistentLevel.BP_Wooden_Log_Cabin_01_EXT_9.SM_WoodenLogCabin",
+                      "FallbackTransform": "-348664.750000,-259379.750000,18439.773438|0.000000,175.395660,0.000000|1.001000,1.001000,1.001000",
+                      "VisibleMesh": "/Game/ConZ_Files/Models/Buildings/WoodenLogCabin/Rework/Objects/SM_WoodenLogCabin.SM_WoodenLogCabin",
+                      "Instance": 1
+                    }
+                  ],
+                  "MinNeeded": 1,
+                  "MaxNeeded": 1,
+                  "SpawnOnlyNeeded": true,
+                  "WorldMarkerShowDistance": 5,
+                  "LocationsShownOnMap": [
+                    {
+                      "Location": {
+                        "X": -349089.938,
+                        "Y": -259451.203,
+                        "Z": 18471.35
+                      },
+                      "SizeFactor": 1
                     }
                   ]
                 }
