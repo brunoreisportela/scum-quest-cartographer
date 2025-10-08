@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Server, MessageCircle, Copy, ExternalLink, FileText, Download, Map } from 'lucide-react';
+import { Server, MessageCircle, Copy, ExternalLink, FileText, Download, Map, Car } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
@@ -274,7 +274,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Loot Settings Card */}
               <Card className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-400/20 backdrop-blur-sm">
                 <div className="p-6 sm:p-8">
@@ -337,6 +337,43 @@ const Index = () => {
                     <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
                       <p className="text-xs text-slate-400 text-center">
                         Programmed restarts ensure optimal server performance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Vehicle System Card */}
+              <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-400/20 backdrop-blur-sm">
+                <div className="p-6 sm:p-8">
+                  <div className="text-center mb-4">
+                    <div className="text-3xl sm:text-4xl font-bold text-green-300 mb-2">
+                      75+
+                    </div>
+                    <h4 className="text-lg font-semibold text-slate-200 mb-2">
+                      Wild Vehicles
+                    </h4>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-300">Condition:</span>
+                      <span className="text-green-300 font-medium">No Engine</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-300">Location:</span>
+                      <span className="text-green-300 font-medium">Spawn Points</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-300">Acquisition:</span>
+                      <span className="text-green-300 font-medium">Salvage & Repair</span>
+                    </div>
+                    <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
+                      <p className="text-xs text-slate-400 text-center mb-2">
+                        <Car className="h-4 w-4 inline mr-1" />
+                        Retrieve abandoned vehicles and bring them to mechanics for refurbishment
+                      </p>
+                      <p className="text-xs text-slate-400 text-center">
+                        Complete mechanic quests to earn fully restored vehicles as rewards
                       </p>
                     </div>
                   </div>
