@@ -22,10 +22,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 sm:gap-4">
               <div className="relative">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
                   {t('header.title')}
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-lg blur opacity-25"></div>
               </div>
               <div className="text-sm sm:text-lg lg:text-xl font-bold text-slate-200"></div>
             </div>
