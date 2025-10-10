@@ -10,6 +10,8 @@ An interactive quest tree visualizer for the SCUM survival game, featuring a bea
 - **Quest Details Modal**: Detailed information about requirements, rewards, and quest types
 - **Server Information**: Integrated server IP, Discord community, and server rules
 - **Real Quest Data**: Loads actual SCUM quest data from JSON files
+- **🌍 Multi-language Support**: Available in English and Portuguese (Brazilian) with automatic browser language detection
+- **🇧🇷 Brazilian Flag Toggle**: Easy language switching with Brazilian flag icon
 
 ## 🚀 Getting Started
 
@@ -157,6 +159,8 @@ Edit `scripts/processQuests.cjs` to modify quest categories:
 - **shadcn/ui** - Beautiful, accessible UI components
 - **Lucide React** - Modern icon library
 - **React Router** - Client-side routing
+- **React i18next** - Internationalization framework
+- **i18next-browser-languagedetector** - Automatic browser language detection
 
 ## 🌐 Deployment
 

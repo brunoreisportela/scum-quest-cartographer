@@ -4,9 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from '@/components/LanguageToggle';
 
 const ServerRules = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const penaltyMatrix = [
     {
@@ -43,13 +46,14 @@ const ServerRules = () => {
                 className="text-slate-400 hover:text-slate-200"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Quests
+                {t('serverRules.backToQuests')}
               </Button>
-              <div className="text-xl sm:text-2xl font-bold text-slate-200">Server Rules</div>
+              <div className="text-xl sm:text-2xl font-bold text-slate-200">{t('serverRules.title')}</div>
             </div>
             <div className="hidden sm:block text-xs sm:text-sm text-slate-400 font-medium">
-              Hardcore PvE • Fair Play • Respect
+              {t('serverRules.tagline')}
             </div>
+            <LanguageToggle />
           </div>
         </div>
       </header>

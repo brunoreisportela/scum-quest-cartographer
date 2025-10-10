@@ -2,9 +2,12 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Server, MessageCircle, Copy, ExternalLink, FileText, Download, Map, Car } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from '@/components/LanguageToggle';
 
 const Index = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -20,7 +23,7 @@ const Index = () => {
             <div className="flex items-center gap-2 sm:gap-4">
               <div className="relative">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                  Sentience AI - Scum Server
+                  {t('header.title')}
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-lg blur opacity-25"></div>
               </div>
@@ -28,8 +31,9 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="hidden lg:block text-xs sm:text-sm text-slate-400 font-medium">
-              Navigate • Survive • Conquer
+                {t('header.tagline')}
               </div>
+              <LanguageToggle />
               <Button
                 onClick={() => window.open('/sentience_launcher.exe', '_blank')}
                 variant="outline"
@@ -37,8 +41,8 @@ const Index = () => {
                 className="border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10 font-semibold"
               >
                 <Download className="h-4 w-4 mr-2" />
-                <span className="hidden sm:inline">OFFICIAL LAUNCHER</span>
-                <span className="sm:hidden">LAUNCHER</span>
+                <span className="hidden sm:inline">{t('header.launcher')}</span>
+                <span className="sm:hidden">{t('header.launcherShort')}</span>
               </Button>
             </div>
           </div>
@@ -50,10 +54,10 @@ const Index = () => {
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 sm:py-8">
           <div className="text-center mb-6">
             <h3 className="text-xl sm:text-2xl font-bold text-slate-200 mb-2">
-              Join Our SCUM Server
+              {t('serverInfo.title')}
             </h3>
             <p className="text-slate-400 text-sm sm:text-base">
-              Experience the ultimate survival challenge with our community
+              {t('serverInfo.subtitle')}
             </p>
           </div>
           
@@ -65,7 +69,7 @@ const Index = () => {
                   <div className="p-2 bg-emerald-500/20 rounded-lg">
                     <Server className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-400" />
                   </div>
-                  <h4 className="text-lg font-semibold text-slate-200">Server IP</h4>
+                  <h4 className="text-lg font-semibold text-slate-200">{t('serverInfo.serverIp')}</h4>
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-3 mb-3">
                   <code className="text-emerald-300 font-mono text-sm sm:text-base">
@@ -79,7 +83,7 @@ const Index = () => {
                   className="w-full border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10"
                 >
                   <Copy className="h-4 w-4 mr-2" />
-                  Copy Server IP
+                  {t('serverInfo.copyServerIp')}
                 </Button>
               </div>
             </Card>
@@ -91,10 +95,10 @@ const Index = () => {
                   <div className="p-2 bg-blue-500/20 rounded-lg">
                     <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-400" />
                   </div>
-                  <h4 className="text-lg font-semibold text-slate-200">Discord Community</h4>
+                  <h4 className="text-lg font-semibold text-slate-200">{t('serverInfo.discord')}</h4>
                 </div>
                 <p className="text-slate-400 text-sm mb-3">
-                  Join our Discord server for updates, support, and community discussions
+                  {t('serverInfo.discordDescription')}
                 </p>
                 <Button
                   onClick={() => window.open('https://discord.gg/7xY9s6HH7J', '_blank')}
@@ -103,7 +107,7 @@ const Index = () => {
                   className="w-full border-blue-400/50 text-blue-300 hover:bg-blue-500/10"
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  Join Discord
+                  {t('serverInfo.joinDiscord')}
                 </Button>
               </div>
             </Card>
@@ -115,10 +119,10 @@ const Index = () => {
                   <div className="p-2 bg-purple-500/20 rounded-lg">
                     <FileText className="h-5 w-5 sm:h-6 sm:w-6 text-purple-400" />
                   </div>
-                  <h4 className="text-lg font-semibold text-slate-200">Server Rules</h4>
+                  <h4 className="text-lg font-semibold text-slate-200">{t('serverInfo.serverRules')}</h4>
                 </div>
                 <p className="text-slate-400 text-sm mb-3">
-                  Read our comprehensive server rules and guidelines for fair play
+                  {t('serverInfo.serverRulesDescription')}
                 </p>
                 <Button
                   onClick={() => navigate('/server-rules')}
@@ -127,7 +131,7 @@ const Index = () => {
                   className="w-full border-purple-400/50 text-purple-300 hover:bg-purple-500/10"
                 >
                   <FileText className="h-4 w-4 mr-2" />
-                  View Rules
+                  {t('serverInfo.viewRules')}
                 </Button>
               </div>
             </Card>
@@ -139,10 +143,10 @@ const Index = () => {
                   <div className="p-2 bg-teal-500/20 rounded-lg">
                     <Map className="h-5 w-5 sm:h-6 sm:w-6 text-teal-400" />
                   </div>
-                  <h4 className="text-lg font-semibold text-slate-200">Quest Cartographer</h4>
+                  <h4 className="text-lg font-semibold text-slate-200">{t('serverInfo.questCartographer')}</h4>
                 </div>
                 <p className="text-slate-400 text-sm mb-3">
-                  Interactive quest tree and mission tracker for all server quests
+                  {t('serverInfo.questCartographerDescription')}
                 </p>
                 <Button
                   onClick={() => navigate('/quest-cartographer')}
@@ -151,7 +155,7 @@ const Index = () => {
                   className="w-full border-teal-400/50 text-teal-300 hover:bg-teal-500/10"
                 >
                   <Map className="h-4 w-4 mr-2" />
-                  View Quests
+                  {t('serverInfo.viewQuests')}
                 </Button>
               </div>
             </Card>
@@ -166,10 +170,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-200 mb-2">
-                Raw Performance Specs 🚀
+                {t('serverSpecs.title')}
               </h3>
               <p className="text-slate-400 text-sm sm:text-base">
-                Enterprise-grade hardware for uncompromising performance
+                {t('serverSpecs.subtitle')}
               </p>
             </div>
             
@@ -179,7 +183,7 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-blue-300 mb-1">48</div>
-                    <div className="text-xs sm:text-sm text-blue-200 font-medium mb-2">CORES</div>
+                    <div className="text-xs sm:text-sm text-blue-200 font-medium mb-2">{t('serverSpecs.cores')}</div>
                     <div className="text-slate-300 text-sm font-medium">Intel Xeon Gold</div>
                   </div>
                 </div>
@@ -190,8 +194,8 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-emerald-300 mb-1">500</div>
-                    <div className="text-xs sm:text-sm text-emerald-200 font-medium mb-2">GB ECC RAM</div>
-                    <div className="text-slate-300 text-sm font-medium">Error Correcting</div>
+                    <div className="text-xs sm:text-sm text-emerald-200 font-medium mb-2">{t('serverSpecs.ram')}</div>
+                    <div className="text-slate-300 text-sm font-medium">{t('serverSpecs.errorCorrecting')}</div>
                   </div>
                 </div>
               </Card>
@@ -201,8 +205,8 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-purple-300 mb-1">16×</div>
-                    <div className="text-xs sm:text-sm text-purple-200 font-medium mb-2">TESLA A100</div>
-                    <div className="text-slate-300 text-sm font-medium">AI Tasks</div>
+                    <div className="text-xs sm:text-sm text-purple-200 font-medium mb-2">{t('serverSpecs.teslaA100')}</div>
+                    <div className="text-slate-300 text-sm font-medium">{t('serverSpecs.aiTasks')}</div>
                   </div>
                 </div>
               </Card>
@@ -212,8 +216,8 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-orange-300 mb-1">12</div>
-                    <div className="text-xs sm:text-sm text-orange-200 font-medium mb-2">TB NVME</div>
-                    <div className="text-slate-300 text-sm font-medium">RAID-0</div>
+                    <div className="text-xs sm:text-sm text-orange-200 font-medium mb-2">{t('serverSpecs.nvme')}</div>
+                    <div className="text-slate-300 text-sm font-medium">{t('serverSpecs.raid0')}</div>
                   </div>
                 </div>
               </Card>
@@ -223,8 +227,8 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold text-yellow-300 mb-1">10 ↔ 30</div>
-                    <div className="text-xs sm:text-sm text-yellow-200 font-medium mb-2">TPS</div>
-                    <div className="text-slate-300 text-sm font-medium">Adaptive</div>
+                    <div className="text-xs sm:text-sm text-yellow-200 font-medium mb-2">{t('serverSpecs.tps')}</div>
+                    <div className="text-slate-300 text-sm font-medium">{t('serverSpecs.adaptive')}</div>
                   </div>
                 </div>
               </Card>
@@ -234,8 +238,8 @@ const Index = () => {
                 <div className="p-4 sm:p-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-indigo-300 mb-1">50</div>
-                    <div className="text-xs sm:text-sm text-indigo-200 font-medium mb-2">PLAYERS</div>
-                    <div className="text-slate-300 text-sm font-medium">Capacity</div>
+                    <div className="text-xs sm:text-sm text-indigo-200 font-medium mb-2">{t('serverSpecs.players')}</div>
+                    <div className="text-slate-300 text-sm font-medium">{t('serverSpecs.capacity')}</div>
                   </div>
                 </div>
               </Card>
@@ -246,13 +250,10 @@ const Index = () => {
               <div className="p-6 sm:p-8">
                 <div className="text-center">
                   <h4 className="text-lg sm:text-xl font-semibold text-slate-200 mb-3">
-                    Performance Guarantee
+                    {t('serverSpecs.performanceGuarantee')}
                   </h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Head-room for <span className="text-emerald-300 font-semibold">50 players</span>, 
-                    <span className="text-blue-300 font-semibold"> huge puppet hordes</span>, 
-                    <span className="text-purple-300 font-semibold"> live economy math</span>, and 
-                    <span className="text-orange-300 font-semibold"> zero rubber-banding</span>.
+                    {t('serverSpecs.performanceDescription')}
                   </p>
                 </div>
               </div>
@@ -267,10 +268,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-200 mb-2">
-                Server Configuration ⚙️
+                {t('serverConfig.title')}
               </h3>
               <p className="text-slate-400 text-sm sm:text-base">
-                Optimized settings for the ultimate SCUM experience
+                {t('serverConfig.subtitle')}
               </p>
             </div>
             
@@ -283,25 +284,25 @@ const Index = () => {
                       3.5× - 5.0×
                     </div>
                     <h4 className="text-lg font-semibold text-slate-200 mb-2">
-                      Variable Loot Multiplier
+                      {t('serverConfig.variableLootMultiplier')}
                     </h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">AI Controlled:</span>
-                      <span className="text-amber-300 font-medium">Dynamic</span>
+                      <span className="text-slate-300">{t('serverConfig.aiControlled')}:</span>
+                      <span className="text-amber-300 font-medium">{t('serverConfig.dynamic')}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Base Rate:</span>
+                      <span className="text-slate-300">{t('serverConfig.baseRate')}:</span>
                       <span className="text-amber-300 font-medium">3.5×</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Peak Rate:</span>
+                      <span className="text-slate-300">{t('serverConfig.peakRate')}:</span>
                       <span className="text-amber-300 font-medium">5.0×</span>
                     </div>
                     <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
                       <p className="text-xs text-slate-400 text-center">
-                        Loot rates automatically adjust based on server population and AI analysis
+                        {t('serverConfig.lootDescription')}
                       </p>
                     </div>
                   </div>
@@ -313,30 +314,30 @@ const Index = () => {
                 <div className="p-6 sm:p-8">
                   <div className="text-center mb-4">
                     <div className="text-lg sm:text-xl font-bold text-cyan-300 mb-2">
-                      Daily Restarts
+                      {t('serverConfig.dailyRestarts')}
                     </div>
                     <h4 className="text-lg font-semibold text-slate-200 mb-2">
-                      Automated Schedule
+                      {t('serverConfig.automatedSchedule')}
                     </h4>
                   </div>
                   <div className="space-y-4">
                     <div className="bg-slate-800/50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-slate-300 font-medium">Morning Restart</span>
+                        <span className="text-slate-300 font-medium">{t('serverConfig.morningRestart')}</span>
                         <span className="text-cyan-300 font-bold text-lg">4:00 AM</span>
                       </div>
-                      <div className="text-xs text-slate-400">EST • Maintenance & Updates</div>
+                      <div className="text-xs text-slate-400">{t('serverConfig.maintenanceUpdates')}</div>
                     </div>
                     <div className="bg-slate-800/50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-slate-300 font-medium">Afternoon Restart</span>
+                        <span className="text-slate-300 font-medium">{t('serverConfig.afternoonRestart')}</span>
                         <span className="text-cyan-300 font-bold text-lg">3:00 PM</span>
                       </div>
-                      <div className="text-xs text-slate-400">EST • Performance Optimization</div>
+                      <div className="text-xs text-slate-400">{t('serverConfig.performanceOptimization')}</div>
                     </div>
                     <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
                       <p className="text-xs text-slate-400 text-center">
-                        Programmed restarts ensure optimal server performance
+                        {t('serverConfig.restartDescription')}
                       </p>
                     </div>
                   </div>
@@ -351,29 +352,29 @@ const Index = () => {
                       75+
                     </div>
                     <h4 className="text-lg font-semibold text-slate-200 mb-2">
-                      Wild Vehicles
+                      {t('serverConfig.wildVehicles')}
                     </h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Condition:</span>
-                      <span className="text-green-300 font-medium">No Engine</span>
+                      <span className="text-slate-300">{t('serverConfig.condition')}:</span>
+                      <span className="text-green-300 font-medium">{t('serverConfig.noEngine')}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Location:</span>
-                      <span className="text-green-300 font-medium">Spawn Points</span>
+                      <span className="text-slate-300">{t('serverConfig.location')}:</span>
+                      <span className="text-green-300 font-medium">{t('serverConfig.spawnPoints')}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Acquisition:</span>
-                      <span className="text-green-300 font-medium">Salvage & Repair</span>
+                      <span className="text-slate-300">{t('serverConfig.acquisition')}:</span>
+                      <span className="text-green-300 font-medium">{t('serverConfig.salvageRepair')}</span>
                     </div>
                     <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
                       <p className="text-xs text-slate-400 text-center mb-2">
                         <Car className="h-4 w-4 inline mr-1" />
-                        Retrieve abandoned vehicles and bring them to mechanics for refurbishment
+                        {t('serverConfig.vehicleDescription1')}
                       </p>
                       <p className="text-xs text-slate-400 text-center">
-                        Complete mechanic quests to earn fully restored vehicles as rewards
+                        {t('serverConfig.vehicleDescription2')}
                       </p>
                     </div>
                   </div>
@@ -387,24 +388,24 @@ const Index = () => {
                 <div className="p-6 sm:p-8">
                   <div className="text-center">
                     <h4 className="text-lg sm:text-xl font-semibold text-slate-200 mb-4">
-                      Server Features
+                      {t('serverConfig.serverFeatures')}
                     </h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div className="text-center">
-                        <div className="text-emerald-300 font-semibold">AI-Driven</div>
-                        <div className="text-slate-400">Loot Balance</div>
+                        <div className="text-emerald-300 font-semibold">{t('serverConfig.aiDriven')}</div>
+                        <div className="text-slate-400">{t('serverConfig.lootBalance')}</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-blue-300 font-semibold">Automated</div>
-                        <div className="text-slate-400">Maintenance</div>
+                        <div className="text-blue-300 font-semibold">{t('serverConfig.automated')}</div>
+                        <div className="text-slate-400">{t('serverConfig.maintenance')}</div>
                       </div>
                       <div className="text-center">
                         <div className="text-purple-300 font-semibold">24/7</div>
-                        <div className="text-slate-400">Monitoring</div>
+                        <div className="text-slate-400">{t('serverConfig.monitoring')}</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-orange-300 font-semibold">Zero</div>
-                        <div className="text-slate-400">Downtime</div>
+                        <div className="text-orange-300 font-semibold">{t('serverConfig.zero')}</div>
+                        <div className="text-slate-400">{t('serverConfig.downtime')}</div>
                       </div>
                     </div>
                   </div>
@@ -420,8 +421,7 @@ const Index = () => {
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6">
           <div className="text-center">
             <p className="text-slate-500 text-sm">
-              Built with ❤️ for the SCUM community • 
-                by Bruno Portela
+              {t('footer.builtWith')}
             </p>
           </div>
         </div>

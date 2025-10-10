@@ -9,12 +9,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Download } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from '@/components/LanguageToggle';
 
 const QuestCartographer = () => {
   const [selectedQuest, setSelectedQuest] = useState<Quest | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<QuestCategory>(questCategories[0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleQuestSelect = (quest: Quest) => {
     setSelectedQuest(quest);
@@ -40,19 +43,20 @@ const QuestCartographer = () => {
                 className="text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Server
+                {t('questCartographer.backToServer')}
               </Button>
               <div className="relative">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                  Quest Cartographer
+                  {t('questCartographer.title')}
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-lg blur opacity-25"></div>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <div className="hidden lg:block text-xs sm:text-sm text-slate-400 font-medium">
-                Navigate • Survive • Conquer
+                {t('header.tagline')}
               </div>
+              <LanguageToggle />
               <Button
                 onClick={() => window.open('/sentience_launcher.exe', '_blank')}
                 variant="outline"
@@ -60,8 +64,8 @@ const QuestCartographer = () => {
                 className="border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10 font-semibold"
               >
                 <Download className="h-4 w-4 mr-2" />
-                <span className="hidden sm:inline">OFFICIAL LAUNCHER</span>
-                <span className="sm:hidden">LAUNCHER</span>
+                <span className="hidden sm:inline">{t('header.launcher')}</span>
+                <span className="sm:hidden">{t('header.launcherShort')}</span>
               </Button>
             </div>
           </div>
