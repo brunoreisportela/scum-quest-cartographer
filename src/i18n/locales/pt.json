@@ -5,6 +5,28 @@
     "launcher": "LAUNCHER OFICIAL",
     "launcherShort": "LAUNCHER"
   },
+  "launcherModal": {
+    "title": "Instruções do Launcher Oficial",
+    "step1": "Baixe o launcher",
+    "step1Desc": "Clique no botão de download abaixo para obter o arquivo do launcher mais recente",
+    "step2": "Feche seu jogo SCUM se estiver aberto",
+    "step2Desc": "Certifique-se de que o SCUM está completamente fechado antes de prosseguir",
+    "step3": "Execute o launcher",
+    "step3Desc": "Execute o arquivo do launcher baixado como administrador",
+    "step4": "Clique no botão Browser",
+    "step4Desc": "Use o botão browser para localizar sua instalação do SCUM",
+    "step5": "Selecione seu arquivo SCUM.exe",
+    "step5Desc": "Navegue até a pasta do seu jogo SCUM e selecione o arquivo SCUM.exe",
+    "step6": "Clique no botão verde LAUNCH",
+    "step6Desc": "O launcher cuidará de tudo automaticamente",
+    "noteTitle": "Informações Importantes",
+    "note1": "O launcher apenas copia arquivos de mod e baixa versões atualizadas dos mods, depois abre o jogo. O launcher fecha automaticamente após realizar esta ação.",
+    "note2": "Você pode conectar a qualquer outro servidor mesmo usando o launcher.",
+    "additionalTitle": "Uso Flexível",
+    "additionalInfo": "O launcher funciona com qualquer servidor SCUM - ele apenas gerencia arquivos de mod e não restringe qual servidor você pode entrar.",
+    "downloadButton": "Baixar Launcher",
+    "discordButton": "Obter Ajuda no Discord"
+  },
   "serverInfo": {
     "title": "Junte-se ao Nosso Servidor SCUM",
     "subtitle": "Experimente o desafio de sobrevivência definitivo com nossa comunidade",

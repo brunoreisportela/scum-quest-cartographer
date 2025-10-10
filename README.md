@@ -164,6 +164,17 @@ Edit `scripts/processQuests.cjs` to modify quest categories:
 
 ## 🌐 Deployment
 
+### Static Hosting Configuration
+
+The application includes configuration files for various hosting platforms to ensure direct URLs work correctly:
+
+- **`public/_redirects`** - Netlify redirects (fallback)
+- **`public/.htaccess`** - Apache server configuration
+- **`vercel.json`** - Vercel hosting configuration
+- **`netlify.toml`** - Comprehensive Netlify configuration
+
+These files ensure that direct URLs like `https://yoursite.com/server-rules` work properly by redirecting all routes to `index.html` for client-side routing.
+
 ### DigitalOcean App Platform
 
 1. **Push your code** to a GitHub repository
@@ -177,10 +188,11 @@ Edit `scripts/processQuests.cjs` to modify quest categories:
 ### Other Platforms
 
 The application can be deployed to any static hosting service:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
+- **Vercel** - Uses `vercel.json` for routing
+- **Netlify** - Uses `netlify.toml` and `_redirects` for routing
+- **GitHub Pages** - Requires custom 404.html redirect
+- **AWS S3 + CloudFront** - Requires custom error page configuration
+- **Apache Servers** - Uses `.htaccess` for routing
 
 ## 🎯 Server Information
 

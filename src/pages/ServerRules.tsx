@@ -1,4 +1,4 @@
-import { ArrowLeft, Shield, Users, Car, Building, HelpCircle, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Shield, Users, Car, Building, HelpCircle, AlertTriangle, Download } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageToggle from '@/components/LanguageToggle';
+import LauncherModal from '@/components/LauncherModal';
 
 const ServerRules = () => {
   const navigate = useNavigate();
@@ -54,6 +55,17 @@ const ServerRules = () => {
               {t('serverRules.tagline')}
             </div>
             <LanguageToggle />
+            <LauncherModal>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10 font-semibold"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                <span className="hidden sm:inline">{t('header.launcher')}</span>
+                <span className="sm:hidden">{t('header.launcherShort')}</span>
+              </Button>
+            </LauncherModal>
           </div>
         </div>
       </header>

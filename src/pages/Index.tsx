@@ -4,6 +4,7 @@ import { Server, MessageCircle, Copy, ExternalLink, FileText, Download, Map, Car
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageToggle from '@/components/LanguageToggle';
+import LauncherModal from '@/components/LauncherModal';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -33,16 +34,17 @@ const Index = () => {
                 {t('header.tagline')}
               </div>
               <LanguageToggle />
-              <Button
-                onClick={() => window.open('/sentience_launcher.exe', '_blank')}
-                variant="outline"
-                size="sm"
-                className="border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10 font-semibold"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                <span className="hidden sm:inline">{t('header.launcher')}</span>
-                <span className="sm:hidden">{t('header.launcherShort')}</span>
-              </Button>
+              <LauncherModal>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10 font-semibold"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">{t('header.launcher')}</span>
+                  <span className="sm:hidden">{t('header.launcherShort')}</span>
+                </Button>
+              </LauncherModal>
             </div>
           </div>
         </div>

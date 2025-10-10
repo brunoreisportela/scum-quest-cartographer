@@ -5,6 +5,28 @@
     "launcher": "OFFICIAL LAUNCHER",
     "launcherShort": "LAUNCHER"
   },
+  "launcherModal": {
+    "title": "Official Launcher Instructions",
+    "step1": "Download the launcher",
+    "step1Desc": "Click the download button below to get the latest launcher file",
+    "step2": "Close your SCUM game if it is open",
+    "step2Desc": "Make sure SCUM is completely closed before proceeding",
+    "step3": "Execute the launcher",
+    "step3Desc": "Run the downloaded launcher file as administrator",
+    "step4": "Click on Browser button",
+    "step4Desc": "Use the browser button to locate your SCUM installation",
+    "step5": "Select your SCUM.exe file",
+    "step5Desc": "Navigate to your SCUM game folder and select the SCUM.exe file",
+    "step6": "Click on the green LAUNCH button",
+    "step6Desc": "The launcher will handle everything automatically",
+    "noteTitle": "Important Information",
+    "note1": "The launcher only copies mod files and downloads updated versions of mods, then opens the game. The launcher closes automatically after performing this action.",
+    "note2": "You can connect to any other server even when using the launcher.",
+    "additionalTitle": "Flexible Usage",
+    "additionalInfo": "The launcher works with any SCUM server - it only manages mod files and doesn't restrict which server you can join.",
+    "downloadButton": "Download Launcher",
+    "discordButton": "Get Help on Discord"
+  },
   "serverInfo": {
     "title": "Join Our SCUM Server",
     "subtitle": "Experience the ultimate survival challenge with our community",
