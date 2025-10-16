@@ -21,7 +21,7 @@ const ServerRules = () => {
     },
     {
       type: 'Major',
-      example: 'vehicle theft attempt, door raid, racist slur, exploit abuse, combat logging',
+      example: 'vehicle theft attempt, door raid, racist slur, exploit abuse, combat logging, chest magnet abuse',
       action: '7 d ban or longer',
       color: 'bg-orange-500/20 border-orange-400/50 text-orange-300'
     },
@@ -166,6 +166,7 @@ const ServerRules = () => {
               <p className="text-slate-300 text-sm"><span className="font-semibold text-emerald-300">2.5</span> {t('serverRules.rule2_5')}</p>
               <p className="text-slate-300 text-sm"><span className="font-semibold text-emerald-300">2.6</span> {t('serverRules.rule2_6')}</p>
               <p className="text-slate-300 text-sm"><span className="font-semibold text-emerald-300">2.7</span> {t('serverRules.rule2_7')}</p>
+              <p className="text-slate-300 text-sm"><span className="font-semibold text-emerald-300">2.8</span> {t('serverRules.rule2_8')}</p>
             </CardContent>
           </Card>
 
