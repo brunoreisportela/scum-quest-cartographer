@@ -74,11 +74,11 @@ const Index = () => {
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-3 mb-3">
                   <code className="text-emerald-300 font-mono text-sm sm:text-base">
-                    70.55.144.65:7779
+                    70.53.182.54:7779
                   </code>
                 </div>
                 <Button
-                  onClick={() => copyToClipboard('70.55.144.65:7779')}
+                  onClick={() => copyToClipboard('70.53.182.54:7779')}
                   variant="outline"
                   size="sm"
                   className="w-full border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/10"

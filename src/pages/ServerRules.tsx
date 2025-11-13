@@ -77,7 +77,7 @@ const ServerRules = () => {
             <CardTitle className="text-2xl sm:text-3xl font-bold text-slate-200 mb-2">
               {t('serverRules.serverName')}
             </CardTitle>
-            <p className="text-emerald-300 font-mono text-lg">70.55.144.65:7779</p>
+            <p className="text-emerald-300 font-mono text-lg">70.53.182.54:7779</p>
             <Badge className="mx-auto mt-2 bg-emerald-500/20 text-emerald-300 border-emerald-400">
               {t('serverRules.ruleset')}
             </Badge>
