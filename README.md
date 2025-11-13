@@ -196,7 +196,7 @@ The application can be deployed to any static hosting service:
 
 ## 🎯 Server Information
 
-- **Server IP**: 70.55.144.65:7779
+- **Server IP**: 70.53.182.54:7779
 - **Discord**: https://discord.gg/7xY9s6HH7J
 - **Ruleset**: Hardcore PvE
 
